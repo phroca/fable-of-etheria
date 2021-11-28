@@ -1,30 +1,38 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+import SectionDiscover from "../components/section-discover/section-discover"
+import SectionIntro from "../components/section-introduction/section-introduction"
 import Seo from "../components/seo"
+
+import landingLoop from "../videos/landingLoop-desktop.mp4"
+
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
+    <div className="hero--group">
+      <div className="intro--bg">
+        <div className="hero--bg--fit">
+          <video src={landingLoop} playsInline={true} autoPlay={true} muted="muted" loop="loop" preload="auto" className="hero--bg--introVideo"></video>
+        </div>
+      </div>
+      <div className="hero--content">
+        <div className="hero--title">
+        <h1>The Fable <br /> of <span >Etheria</span></h1>
+        </div>
+        <div className="hero--subtitle">
+        <p>The Fable of Etheria is an NFT-powered community composed of 10000 uniquely rendered collectibles thet fight through the Ethereum blockchain</p>
+        </div>
+      </div>
+    </div>
+    <SectionDiscover
+      titleLineOne="Discover the "
+      numberNFT="10010"
+      titleLineTwo="Etherias protagonists"
     />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p>
+    <SectionIntro />
+    
   </Layout>
 )
 

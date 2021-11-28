@@ -1,0 +1,19 @@
+{
+    "image": [{
+            "id": 1,
+            "imageSrc": "/images/card1.png"
+        },
+        {
+            "id": 2,
+            "imageSrc": "/images/card2.png"
+        },
+        {
+            "id": 3,
+            "imageSrc": "/images/card3.png"
+        },
+        {
+            "id": 4,
+            "imageSrc": "/images/card4.png"
+        }
+    ]
+}

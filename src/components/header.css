@@ -1,0 +1,118 @@
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 50px 0;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.header-scrolled {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+}
+
+.header-group {
+    max-width: 80vw;
+    margin: 0 200px;
+    display: grid;
+    grid-template-columns: 200px 200px auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.header a,
+.header span {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+/*
+.header button {
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    font-size: 20px;
+    background: #56CCF2;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.header button:hover {
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px);
+}*/
+
+.nav-group-dark-light-mode {
+    position: relative;
+    width: 110px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    justify-items: center;
+}
+
+.nav-group-dark-light-mode .switch-theme {
+    width: 50px;
+    height: 20px;
+    border-radius: 15px;
+    border: 1px solid white;
+}
+
+.nav-group-dark-light-mode .switch-theme .interruptor {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 100%;
+    top: 3px;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1)
+}
+
+.nav-group-dark-light-mode .switch-theme .interruptor.light-mode {
+    transform: translateX(32px);
+    /*right: 32px;*/
+}
+
+.nav-group-dark-light-mode .switch-theme .interruptor.dark-mode {
+    transform: translateX(2px);
+    /*left: 32px;*/
+}
+
+.nav-group-dark-light-mode>div {
+    cursor: pointer;
+}
+
+.nav-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    justify-items: center;
+    align-items: center;
+    justify-self: end;
+}
+
+.nav-group .btn-menu:hover {
+    cursor: pointer;
+}
+
+.nav-group span:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .header {
+        padding: 15px 0;
+    }
+    .header-group {
+        grid-template-columns: repeat(4, auto);
+    }
+    .header a:nth-child(3),
+    .header a:nth-child(5) {
+        display: none;
+    }
+}

@@ -1,0 +1,44 @@
+.dark-mode .section-intro {
+    background: #00001F;
+    color: white;
+}
+
+.light-mode .section-intro {
+    background: #FFFFFF;
+    color: #00001F;
+}
+
+.dark-mode .section-intro--subtitle,
+.dark-mode .section-intro--about {
+    color: white;
+}
+
+.light-mode .section-intro--subtitle,
+.light-mode .section-intro--about {
+    color: #00001F;
+}
+
+.section-intro>div .img-1 {
+    width: 202px;
+    height: 234px;
+    margin-top: 60px;
+    align-self: start;
+    justify-self: end;
+}
+
+.section-intro>div .img-2 {
+    width: 519px;
+    height: 668px;
+}
+
+.section-intro>div .img-3 {
+    width: 279px;
+    height: 327px;
+    align-self: center;
+    justify-self: start;
+}
+
+.section-intro>div img {
+    width: 100%;
+    height: 100%
+}

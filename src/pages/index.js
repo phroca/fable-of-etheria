@@ -1,14 +1,20 @@
 import * as React from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {useRef, useEffect} from "react";
 
 import Layout from "../components/layout"
 import SectionDiscover from "../components/section-discover/section-discover"
+import SectionFaction from "../components/section-factions/section-factions"
 import SectionIntro from "../components/section-introduction/section-introduction"
 import Seo from "../components/seo"
 
 import landingLoop from "../videos/landingLoop-desktop.mp4"
 
 
-const IndexPage = () => (
+const IndexPage = () => {
+
+return(
   <Layout>
     <Seo title="Home" />
     <div className="hero--group">
@@ -32,8 +38,9 @@ const IndexPage = () => (
       titleLineTwo="Etherias protagonists"
     />
     <SectionIntro />
-    
+    <SectionFaction />
   </Layout>
 )
+}
 
 export default IndexPage

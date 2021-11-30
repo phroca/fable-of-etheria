@@ -33,7 +33,7 @@ class Header extends React.Component {
       <div>
         <div className={this.state.hasScrolled ? 'header header-scrolled' : 'header'}>
           <div className="header-group">
-            <Link to="/"> The fable of Etheria</Link>
+            <Link to="/"> The Fable of Etheria</Link>
             <div className="nav-group-dark-light-mode">
               <div className="dark" onClick={() => this.props.clickDark()}><img src={darkIcon} /></div>
               <div className="switch-theme">

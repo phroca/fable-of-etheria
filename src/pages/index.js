@@ -10,6 +10,7 @@ import SectionIntro from "../components/section-introduction/section-introductio
 import Seo from "../components/seo"
 
 import landingLoop from "../videos/landingLoop-desktop.mp4"
+import SectionRoadmap from "../components/section-roadmap/section-roadmap";
 
 
 const IndexPage = () => {
@@ -39,6 +40,7 @@ return(
     />
     <SectionIntro />
     <SectionFaction />
+    <SectionRoadmap />
   </Layout>
 )
 }

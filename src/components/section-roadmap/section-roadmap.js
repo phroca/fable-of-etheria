@@ -27,8 +27,8 @@ const SectionRoadmap = () => {
             pin: IntroVideoRef.current,
             anticipatePin: 1,
             start: "top top",
-            end: "+=2000",
-            markers: true,
+            end: "+=3000",
+            /*markers: true,*/
             onUpdate: (self)=> {
                 if(videoRef.current) {
                     let scrollPos = self.progress;      
@@ -45,7 +45,6 @@ const SectionRoadmap = () => {
     return (
         <div ref={IntroVideoRef} className="container--roadmap">
             <video ref={videoRef} src={testvideo}  playsInline={true} muted="muted" preload="auto" className="container--roadmap--video"></video>
-
         </div>
     )
 

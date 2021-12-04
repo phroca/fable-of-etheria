@@ -1,0 +1,55 @@
+{
+    "socialLink": [{
+            "id": "sl-1",
+            "title": "Open Sea",
+            "link": "#"
+        },
+        {
+            "id": "sl-2",
+            "title": "Twitter",
+            "link": "#"
+        },
+        {
+            "id": "sl-3",
+            "title": "Instagram",
+            "link": "#"
+        },
+        {
+            "id": "sl-4",
+            "title": "Medium",
+            "link": "#"
+        },
+        {
+            "id": "sl-5",
+            "title": "Discord",
+            "link": "#"
+        }
+    ],
+    "teamLink": [{
+            "id": "tl-1",
+            "title": "Story",
+            "link": "#"
+        },
+        {
+            "id": "tl-2",
+            "title": "Team",
+            "link": "#"
+        },
+        {
+            "id": "tl-3",
+            "title": "Contact",
+            "link": "#"
+        }
+    ],
+    "privacyLink": [{
+            "id": "pl-1",
+            "title": "Privacy Policy",
+            "link": "#"
+        },
+        {
+            "id": "pl-2",
+            "title": "Cookies",
+            "link": "#"
+        }
+    ]
+}

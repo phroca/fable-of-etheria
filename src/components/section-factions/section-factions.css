@@ -1,12 +1,18 @@
 .container--factions {
-    background: #00001F;
     height: 270vh;
     transition: 1s;
     position: relative;
 }
 
+.dark-mode .container--factions {
+    background: #00001F;
+}
+
+.light-mode .container--factions {
+    background: #FFFFFF;
+}
+
 .container--factions--content {
-    background: #0E0E2B;
     height: 400vh;
     width: 100%;
     transition: 1s;
@@ -16,6 +22,14 @@
     left: 0;
 }
 
+.dark-mode .container--factions--content {
+    background: #0E0E2B;
+}
+
+.light-mode .container--factions--content {
+    background: #EEEEEE;
+}
+
 .container--factions--header {
     margin-top: 200px;
     display: grid;
@@ -23,8 +37,15 @@
     grid-gap: 30px;
     align-content: center;
     justify-items: center;
-    color: white;
     text-align: center;
+}
+
+.dark-mode .container--factions--header {
+    color: white;
+}
+
+.light-mode .container--factions--header {
+    color: #00001F;
 }
 
 .faction--title {
@@ -74,7 +95,14 @@ button {
     justify-items: center;
     align-items: center;
     text-align: center;
+}
+
+.dark-mode .container--factions--cta {
     color: white;
+}
+
+.light-mode .ccontainer--factions--cta {
+    color: #00001F;
 }
 
 .cta--title {
@@ -97,7 +125,6 @@ button {
     height: 400px;
     border-radius: 100%;
     background: transparent;
-    border: 1px solid white;
     position: relative;
     display: grid;
     grid-template-rows: 50px 200px;
@@ -105,7 +132,16 @@ button {
     justify-items: center;
     text-align: center;
     grid-gap: 30px;
+}
+
+.dark-mode .circle--fundation {
+    border: 1px solid white;
     color: white;
+}
+
+.light-mode .circle--fundation {
+    border: 1px solid #00001F;
+    color: #00001F;
 }
 
 .fundation--title {
@@ -123,7 +159,6 @@ button {
     width: 400px;
     height: 400px;
     border-radius: 100%;
-    background: white;
     position: relative;
     display: grid;
     grid-template-rows: 50px 200px;
@@ -131,7 +166,16 @@ button {
     align-content: center;
     justify-items: center;
     text-align: center;
-    color: #00001F
+}
+
+.dark-mode .circle--alliance {
+    background: white;
+    color: #00001F;
+}
+
+.light-mode .circle--alliance {
+    background: #00001F;
+    color: white;
 }
 
 .alliance--title {
@@ -147,18 +191,32 @@ button {
 
 .container--factions--footer {
     margin-top: 200px;
-    ;
     display: grid;
     grid-template-rows: 100px auto;
     grid-gap: 30px;
     align-content: center;
     justify-items: center;
-    color: white;
     text-align: center;
+}
+
+.dark-mode .container--factions--footer {
+    color: white;
+}
+
+.light-mode .container--factions--footer {
+    color: #00001F;
 }
 
 .faction--subtitle {
     font-size: 18px;
     font-weight: 100;
     max-width: 300px;
+}
+
+.dark-mode .animated--arrow {
+    filter: invert(0%);
+}
+
+.light-mode .animated--arrow {
+    filter: invert(100%);
 }

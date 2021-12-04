@@ -13,6 +13,7 @@ import landingLoop from "../videos/landingLoop-desktop.mp4"
 import SectionRoadmap from "../components/section-roadmap/section-roadmap";
 
 
+
 const IndexPage = () => {
 
 return(

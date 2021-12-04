@@ -1,7 +1,6 @@
 .container--roadmap {
     position: relative;
     z-index: -1;
-    height: 2000px;
 }
 
 .container--roadmap--video {

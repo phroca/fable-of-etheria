@@ -1,16 +1,11 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import FooterWidget from "../components/footer-widget/footer-widget";
+import Footer from "../components/footer-widget/footer/footer";
 
 class Layout extends React.Component {
   constructor(props){
@@ -35,15 +30,8 @@ class Layout extends React.Component {
         <Header darkMode={this.state.isDarkMode} clickDark={this.handleClickDark} clickLight={this.handleClickLight}/>
         <div>
           <main className={this.state.isDarkMode ? 'dark-mode': 'light-mode'}>{children}</main>
-          <footer
-            style={{
-              marginTop: `2rem`,
-            }}
-          >
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.com">Gatsby</a>
-          </footer>
+          <FooterWidget darkMode={this.state.isDarkMode ? 'dark-mode': 'light-mode'} />
+          <Footer darkMode={this.state.isDarkMode ? 'dark-mode': 'light-mode'}/>
         </div>
       </>
     )

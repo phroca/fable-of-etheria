@@ -54,9 +54,11 @@
     top: 20px;
 }
 
-.section-discover img {
-    vertical-align: middle;
-    display: inline-block;
+.swiper--block {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    overflow: hidden;
 }
 
 .slider-navigation.prev-side {

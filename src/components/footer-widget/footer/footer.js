@@ -1,7 +1,6 @@
-import { Link } from "gatsby"
 import * as React from "react"
 import styled from "styled-components"
-
+import { Link } from "gatsby"
 import socialdata from "../../../../socialdata.json"
 import "./footer.css"
 
@@ -9,7 +8,7 @@ const FooterGrid = styled.div`
         background: #00001F;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
-        padding: 50px 150px;
+        padding: 50px 200px;
         transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
         height: 200px;
         align-items: center;
@@ -20,9 +19,6 @@ const FooterGrid = styled.div`
         justify-content: center;
         align-items: center;
         grid-gap: 40px;
-    `
-    const FooterHomeLink = styled.a`
-        font-size: 24px;
     `
 
     const FooterDivider = styled.div`
@@ -76,18 +72,13 @@ const FooterGrid = styled.div`
         grid-gap: 10px;
         justify-self: end;
         justify-items: end;
-        a.privacy--link{
-            font-size: 18px;
-            font-weight: 200;
-
-        }
     `
 
 const Footer = ({darkMode}) => (
         <FooterGrid className={`${darkMode} footer--grid`}>
             <FooterLinks>
-                <FooterHomeLink>The Fable of Etheria</FooterHomeLink>
-                <FooterSocialLink>
+                <Link className="home--link" to="/">The Fable of Etheria</Link>
+                <FooterSocialLink className="footer--social--link">
                     {socialdata.socialLink.map( sl => (
                         <a className="social--link" key={sl.id} href={sl.link}>{sl.title}</a>
                     ))}

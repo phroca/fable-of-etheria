@@ -1,0 +1,28 @@
+{
+    "steps": [{
+            "id": "rm-1",
+            "title": "01",
+            "content": "Lorem ipsum sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id": "rm-2",
+            "title": "02",
+            "content": "Lorem ipsum sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id": "rm-3",
+            "title": "03",
+            "content": "Lorem ipsum sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id": "rm-4",
+            "title": "04",
+            "content": "Lorem ipsum sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id": "rm-5",
+            "title": "05",
+            "content": "Lorem ipsum sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ]
+}

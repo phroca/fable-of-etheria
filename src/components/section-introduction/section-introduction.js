@@ -1,7 +1,9 @@
 import * as React from "react"
+import {useRef, useEffect} from "react";
 import styled from "styled-components"
 import { Link } from "gatsby"
-
+import gsap from "gsap"
+import ScrollTrigger from "gsap/ScrollTrigger"
 import "./section-introduction.css"
 
 import staticdata from "../../../imgdata.json"
@@ -74,30 +76,73 @@ img{
 }
 `
 
-const SectionIntro = () => (
-    <SectionGroup className="section-intro">
-        <SectionHeading>
-            <SectionSubtitle className="section-intro--subtitle">
-            It is said here that our destiny is played out at birth. The people of the upper town known as the upside are for the sole purpose of integrating and serving the interests of the foundation. In the lower town that we call downtown, everything is toxic fumes and dust here enslaved by the foundation.
-            </SectionSubtitle>
-            <SectionAbout className="section-intro--about">
-                <SubHeadOne>Allow us to</SubHeadOne>
-                <SubHeadTwo>
-                <Link to="/about-us"><button>About us</button></Link>
-                <div>
-                    <span>introduce</span><br />
-                    ourselves
-                </div>
-                </SubHeadTwo>
-            </SectionAbout>
-        </SectionHeading>
-        <SectionGroupImage>
-            <div className="img-1"><img src={staticdata.image[0].imageSrc} /></div>
-            <div className="img-2"><img src={staticdata.image[1].imageSrc} /></div>
-            <div className="img-3"><img src={staticdata.image[2].imageSrc} /></div>
-        </SectionGroupImage>
-    </SectionGroup>
+const SectionIntro = () => {
+    gsap.registerPlugin(ScrollTrigger);
+    const ref = useRef(null);
 
-)
+    useEffect(() =>{
+        gsap.fromTo(".sig-img-1",
+        {opacity:0},{    
+            scrollTrigger: {
+                trigger: ".sig-img-1",
+                start: "top bottom",
+                end: "bottom top",
+                toggleActions: "play none none none",
+                
+            },
+            opacity:1,
+            duration: 1.5,
+        });
+
+        gsap.fromTo(".sig-img-2",
+        {opacity:0},{    
+            scrollTrigger: {
+                trigger: ".sig-img-2",
+                start: "top bottom",
+                end: "bottom top",
+                toggleActions: "play none none none", 
+            },
+            opacity:1,
+            duration: 1.5,
+        });
+
+        gsap.fromTo(".sig-img-3",
+        {opacity:0},{    
+            scrollTrigger: {
+                trigger: ".sig-img-3",
+                start: "top bottom",
+                end: "bottom top",
+                toggleActions: "play none none none",
+            },
+            opacity:1,
+            duration: 1.5,
+        });
+    });
+
+    return(
+        <SectionGroup className="section-intro" ref={ref}>
+            <SectionHeading>
+                <SectionSubtitle data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200" className="section-intro--subtitle">
+                It is said here that our destiny is played out at birth. The people of the upper town known as the upside are for the sole purpose of integrating and serving the interests of the foundation. In the lower town that we call downtown, everything is toxic fumes and dust here enslaved by the foundation.
+                </SectionSubtitle>
+                <SectionAbout className="section-intro--about">
+                    <SubHeadOne data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200" className="introduce--subtitle-1">Allow us to</SubHeadOne>
+                    <SubHeadTwo>
+                    <Link to="/about-us"><button>About us</button></Link>
+                    <div data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300" className="introduce--subtitle-2">
+                        <span>introduce</span><br />
+                        ourselves
+                    </div>
+                    </SubHeadTwo>
+                </SectionAbout>
+            </SectionHeading>
+            <SectionGroupImage className="section-intro--groupImage" >
+                <div className="sig-img-1"><img src={staticdata.image[0].imageSrc} /></div>
+                <div className="sig-img-2"><img src={staticdata.image[1].imageSrc} /></div>
+                <div className="sig-img-3"><img src={staticdata.image[2].imageSrc} /></div>
+            </SectionGroupImage>
+        </SectionGroup>
+    )
+}
 
 export default SectionIntro

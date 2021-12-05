@@ -1,12 +1,11 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
+import { Link } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import FooterWidget from "../components/footer-widget/footer-widget";
 import Footer from "../components/footer-widget/footer/footer";
-
+import discord from "../images/discord.png";
 class Layout extends React.Component {
   constructor(props){
     super(props)
@@ -29,6 +28,11 @@ class Layout extends React.Component {
       <>
         <Header darkMode={this.state.isDarkMode} clickDark={this.handleClickDark} clickLight={this.handleClickLight}/>
         <div>
+          <Link to="#" className="foe--discord">
+            <button>
+              <img height="120" width="120" src={discord} alt="discord" />
+            </button>
+          </Link>
           <main className={this.state.isDarkMode ? 'dark-mode': 'light-mode'}>{children}</main>
           <FooterWidget darkMode={this.state.isDarkMode ? 'dark-mode': 'light-mode'} />
           <Footer darkMode={this.state.isDarkMode ? 'dark-mode': 'light-mode'}/>

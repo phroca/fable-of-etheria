@@ -18,7 +18,7 @@
     color: #00001F;
 }
 
-.section-intro>div .img-1 {
+.section-intro>div .sig-img-1 {
     width: 202px;
     height: 234px;
     margin-top: 60px;
@@ -26,12 +26,12 @@
     justify-self: end;
 }
 
-.section-intro>div .img-2 {
+.section-intro>div .sig-img-2 {
     width: 519px;
     height: 668px;
 }
 
-.section-intro>div .img-3 {
+.section-intro>div .sig-img-3 {
     width: 279px;
     height: 327px;
     align-self: center;

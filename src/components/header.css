@@ -21,7 +21,8 @@
 }
 
 .header a,
-.header span {
+.header span,
+.menu--overlay a {
     color: white;
     font-weight: 500;
     text-decoration: none;
@@ -96,7 +97,7 @@
     justify-self: end;
 }
 
-.nav-group .btn-menu:hover {
+.nav-group .btn-menu-open:hover {
     cursor: pointer;
 }
 
@@ -115,4 +116,109 @@
     .header a:nth-child(5) {
         display: none;
     }
+}
+
+
+/* MENU ENABLED */
+
+.menu--overlay {
+    background: black;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    transition: 1s ease;
+    clip-path: circle(0px at 85% 30px);
+}
+
+.menu--overlay.menu--enable {
+    z-index: 1000;
+    clip-path: circle(200% at 85% 30px);
+}
+
+.btn-menu-close:hover {
+    cursor: pointer;
+}
+
+.menu--container {
+    display: grid;
+    grid-template-rows: 50px auto;
+    grid-gap: 200px;
+    padding: 20px 250px 20px 200px;
+}
+
+.menu--header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu--header .btn-menu-close {
+    justify-self: end;
+}
+
+.menu--links {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+}
+
+.menu--team {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    transition: 350ms ease;
+    max-width: 300px;
+    z-index: 100;
+}
+
+.menu--team a.team--link {
+    transition: 350ms ease;
+    font-size: 60px;
+    z-index: 200;
+}
+
+.menu--team a.team--link:hover {
+    transform: translateX(50px);
+}
+
+.menu--social--policies {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+.menu--social {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 5px;
+    justify-items: end;
+    align-items: center;
+}
+
+.menu--social a.social--link {
+    transition: opacity 350ms;
+    font-weight: 200;
+    opacity: .95;
+}
+
+.menu--social a.social--link:hover {
+    opacity: .6;
+}
+
+.menu--policy {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px;
+    justify-items: end;
+    align-items: center;
+}
+
+.menu--policy a.privacy--link {
+    transition: opacity 350ms;
+    font-weight: 200;
+    opacity: .6;
+}
+
+.menu--policy a.privacy--link:hover {
+    opacity: .95;
 }

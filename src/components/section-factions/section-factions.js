@@ -11,56 +11,124 @@ import arrow from "../../images/arrow-down.svg"
 import staticdata from "../../../imgdata.json"
 
 
+/*
+img-1
+transform: rotate(340deg) translateX(230px);
+
+*/
 
 const SectionFaction = () => {
-    // gsap.registerPlugin(ScrollTrigger);
-    // const ref = useRef(null);
-    // useEffect(() => {
-    //     const element = ref.current;
-    //     gsap.fromTo(
-    //         ".container--factions--content",
-    //         {clipPath: 'circle(0% at 50% 50%)'}, {clipPath: 'circle(100% at 50% 50%)', 
-    //         scrollTrigger: {
-    //             trigger: ".container--factions--content",
-    //             start:  "top 70%",
-    //             end: "10% 30%",
-    //             scrub: true,
-    //             markers: true
-    //         }}
-    //     );
-    // }, [])
+    gsap.registerPlugin(ScrollTrigger);
+    const ref = useRef(null);
+    useEffect(() => {
+        const element = ref.current;
+
+        gsap.fromTo(
+            ".circle--fundation",
+            {transform: 'translateX(200px)', opacity: 0}, { 
+            scrollTrigger: {
+                trigger: ".circle--fundation",
+                start:  "top bottom",
+                end: "bottom top",
+                toggleActions: "play none none none",
+            },
+            transform: 'translateX(0)',
+            opacity: 1,
+            delay: 0.4,
+            duration: 2
+            }
+        );
+
+        gsap.fromTo(
+            ".circle--alliance",
+            {transform: 'translateX(-200px)', opacity: 0}, { 
+            scrollTrigger: {
+                trigger: ".circle--alliance",
+                start:  "top bottom",
+                end: "bottom top",
+                toggleActions: "play none none none",
+            },
+            transform: 'translateX(0)',
+            opacity: 1,
+            delay: 0.4,
+            duration: 2
+            }
+        );
+
+        gsap.fromTo(
+            ".gi-img-1",
+            {transform: 'translateX(230px)'}, { 
+            scrollTrigger: {
+                trigger: ".gi-img-1",
+                start:  "top bottom",
+                end: "bottom top",
+                toggleActions: "restart none restart none",
+            },
+            transform: 'rotate(340deg) translateX(100px) translateY(40px)',
+            duration: 2
+            }
+        );
+
+        gsap.to(".gi-img-2",
+            {
+            scrollTrigger: {
+                trigger: ".gi-img-2",
+                start:  "top bottom",
+                end: "bottom top",
+                toggleActions: "restart none restart none",
+            },
+            transform: 'rotate(360deg)',
+            duration: 2
+        });
+
+        gsap.fromTo(
+            ".gi-img-3",
+            {transform: 'translateX(-230px)'}, { 
+            scrollTrigger: {
+                trigger: ".gi-img-3",
+                start:  "top bottom",
+                end: "bottom top",
+                toggleActions: "restart none restart none",
+            },
+            transform: 'rotate(20deg) translateX(-100px) translateY(40px)',
+            duration: 2
+            }
+        );
+    });
+
+ 
 
     return(
-    <div className="container--factions">
+    <div className="container--factions" ref={ref}>
         <div className="container--factions--content">
             <div className="container--factions--header">
                 <div className="animated--arrow">
                     <img src={arrow} />
                 </div>
-                <div className="faction--title">
+                <div data-sal="slide-up" data-sal-duration="1000" className="faction--title">
                     Lorem ipsum loreth sulfiundguiltas estem
                 </div>
-                <div className="faction--subtitle">
+                <div data-sal="slide-up" data-sal-duration="1000" className="faction--subtitle">
                     quis nostrud exercitation ullamco 
                     laboris nisi ut aliquip ex ea commodo consequat. 
                     Duis aute irure dolor in reprehenderit in voluptate 
                     velit esse cillum dolore eu fugiat nulla pariatur
                 </div>
-                <Link to="/collection"><button>View All</button></Link>
-                <div class="group--image">
-                    <div className="img-1"><img src={staticdata.image[0].imageSrc} /></div>
-                    <div className="img-2"><img src={staticdata.image[1].imageSrc} /></div>
-                    <div className="img-3"><img src={staticdata.image[2].imageSrc} /></div>
+                <Link data-sal="slide-up" data-sal-duration="1000" to="/collection"><button>View All</button></Link>
+                <div className="group--image">
+                    <div className="gi-img-1"><img src={staticdata.image[0].imageSrc} /></div>
+                    <div className="gi-img-2"><img src={staticdata.image[1].imageSrc} /></div>
+                    <div className="gi-img-3"><img src={staticdata.image[2].imageSrc} /></div>
                 </div>
             </div>
             
             <div className="container--factions--cta">
-                <div className="cta--title">
+                <div data-sal="slide-up" data-sal-duration="1000" className="cta--title">
                     We all share two
                     differents sides for 
                     the properties
                 </div>
-                <Link to="/collection"><button>View All</button></Link>
+                <Link data-sal="slide-up" data-sal-duration="1000" to="/collection"><button>View All</button></Link>
             </div>
             <div className="container--factions--circles">
                 <div className="circle--fundation">
@@ -73,7 +141,7 @@ const SectionFaction = () => {
                 </div>
             </div>
             <div className="container--factions--footer">
-                <div className="faction--subtitle">
+                <div data-sal="slide-up" data-sal-duration="1000" className="faction--subtitle">
                 We’ve been quietly making a name for ourselves on the Ethereum blockchain and there will be 3,500 of us to collect.
                 </div>
                 <div className="animated--arrow">

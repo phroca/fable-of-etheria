@@ -1,19 +1,23 @@
 {
     "image": [{
             "id": 1,
-            "imageSrc": "./images/card1.png"
+            "imageSrc": "./images/card1.png",
+            "alt": "img-1"
         },
         {
             "id": 2,
-            "imageSrc": "./images/card2.png"
+            "imageSrc": "./images/card2.png",
+            "alt": "img-2"
         },
         {
             "id": 3,
-            "imageSrc": "./images/card3.png"
+            "imageSrc": "./images/card3.png",
+            "alt": "img-3"
         },
         {
             "id": 4,
-            "imageSrc": "./images/card4.png"
+            "imageSrc": "./images/card4.png",
+            "alt": "img-4"
         }
     ]
 }

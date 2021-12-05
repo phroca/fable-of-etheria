@@ -34,3 +34,22 @@ button {
     height: 300px;
     margin: 0 20px;
 }
+
+.footer--container .animated--arrow img {
+    animation: RightLeft;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes RightLeft {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

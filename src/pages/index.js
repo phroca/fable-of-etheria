@@ -15,6 +15,9 @@ import SectionRoadmap from "../components/section-roadmap/section-roadmap";
 
 
 const IndexPage = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+let container = document.querySelector("#scroll-container");
 
 return(
   <Layout>

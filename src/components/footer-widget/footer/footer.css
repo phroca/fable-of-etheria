@@ -8,6 +8,14 @@
     color: #00001F;
 }
 
+.home--link {
+    font-size: 24px;
+}
+
+.footer--social--link {
+    width: 500px;
+}
+
 a {
     text-decoration: none;
 }
@@ -20,6 +28,7 @@ a {
 .dark-mode.footer--grid a,
 .dark-mode.footer--grid p {
     color: white;
+    opacity: .95;
 }
 
 .dark-mode .footer--divider {
@@ -28,4 +37,27 @@ a {
 
 .light-mode .footer--divider {
     background: #00001F;
+}
+
+.footer--grid a.privacy--link {
+    font-size: 18px;
+    font-weight: 200;
+    opacity: 0.6;
+}
+
+.footer--grid a.social--link,
+.footer--grid a.team--link,
+.footer--grid a.privacy--link,
+.footer--grid .home--link {
+    transition: 350ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.footer--grid a.social--link:hover,
+.footer--grid a.team--link:hover,
+.footer--grid .home--link:hover {
+    opacity: 0.6;
+}
+
+.footer--grid a.privacy--link:hover {
+    opacity: .95;
 }

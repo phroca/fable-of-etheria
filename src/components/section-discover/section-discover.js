@@ -1,7 +1,14 @@
 import * as React from "react"
+import { useRef } from 'react'
 import styled from "styled-components"
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Scrollbar } from 'swiper';
 import "./section-discover.css"
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 import arrowLeft from "../../images/arrow-left.svg"
 import arrowRight from "../../images/arrow-right.svg"
@@ -54,31 +61,49 @@ img{
     margin: 0 20px;
 }
 `
-const SectionDiscover = props => (
-    <SectionGroup className="section-discover">
-        <SectionHeading>
-            <SectionSubtitle className="section-discover--subtitle">
-                <SectionSubtitleOne data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">{props.titleLineOne} <span>{props.numberNFT}</span></SectionSubtitleOne>
-                <SectionSubtitleTwo data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">{props.titleLineTwo}</SectionSubtitleTwo>
-            </SectionSubtitle>
-            <SectionArrows>
-                <div className="slider-navigation prev-side">
-                    <div className="wrapper-icon-left">
-                        <img src={arrowLeft} />
+const SectionDiscover = (props) => {
+    const ref = useRef(null);
+    const goNext = () => {
+    if (ref.current !== null && ref.current.swiper !== null) {
+      ref.current.swiper.slideNext();
+    }
+  };
+
+  const goPrev = () => {
+    if (ref.current !== null && ref.current.swiper !== null) {
+      ref.current.swiper.slidePrev();
+    }
+  };
+
+    return(
+        <SectionGroup className="section-discover">
+            <SectionHeading>
+                <SectionSubtitle className="section-discover--subtitle">
+                    <SectionSubtitleOne data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">{props.titleLineOne} <span>{props.numberNFT}</span></SectionSubtitleOne>
+                    <SectionSubtitleTwo data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">{props.titleLineTwo}</SectionSubtitleTwo>
+                </SectionSubtitle>
+                <SectionArrows>
+                    <div onClick={goPrev} className="slider-navigation prev-side">
+                        <div className="wrapper-icon-left">
+                            <img src={arrowLeft} />
+                        </div>
                     </div>
-                </div>
-                <div className="slider-navigation next-side">
-                    <div className="wrapper-icon-right">
-                        <img src={arrowRight} />
+                    <div onClick={goNext} className="slider-navigation next-side">
+                        <div className="wrapper-icon-right">
+                            <img src={arrowRight} />
+                        </div>
                     </div>
-                </div>
-            </SectionArrows>
-        </SectionHeading>
-        <SectionGroupImage>
-            {staticdata.image.map(img => (
-                <img key={img.id} src={img.imageSrc} />
-            ))}
-        </SectionGroupImage>
-    </SectionGroup>
-)
+                </SectionArrows>
+            </SectionHeading>
+            <Swiper ref={ref} modules={[Scrollbar]} spaceBetween={20} slidesPerView={5} scrollbar={{ draggable: true, hide: true }}>
+                {staticdata.image.map(img => (
+                    <SwiperSlide>
+                        <img key={img.id} width="250" height="300" src={img.imageSrc} />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </SectionGroup>
+    )
+
+}
 export default SectionDiscover

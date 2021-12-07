@@ -17,6 +17,15 @@ const FooterContainer = styled.div`
         padding: 100px 200px;
         grid-gap: 20px;
         transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+        @media(max-width: 640px) {
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 1fr;
+            padding: 100px 0px;
+            align-content: center;
+            justify-items: center;
+            text-align: center;
+        }
+
     `
     const FooterTextContents = styled.div`
         display: grid;
@@ -26,6 +35,9 @@ const FooterContainer = styled.div`
     const FooterTextTitle = styled.div`
         font-size: 50px;
         font-weight: 500;
+        @media(max-width: 640px) {
+            font-size: 30px;
+        }
     `
     const FooterParagraph = styled.div`
         font-size: 18px;

@@ -95,10 +95,10 @@ const SectionDiscover = (props) => {
                     </div>
                 </SectionArrows>
             </SectionHeading>
-            <Swiper ref={ref} modules={[Scrollbar]} spaceBetween={20} slidesPerView={5} scrollbar={{ draggable: true, hide: true }}>
+            <Swiper ref={ref} modules={[Scrollbar]} spaceBetween={20} slidesPerView={5} scrollbar={{ draggable: true, hide: true }} breakpoints={{640: {width: 640,slidesPerView: 1}}}>
                 {staticdata.image.map(img => (
-                    <SwiperSlide>
-                        <img key={img.id} width="250" height="300" src={img.imageSrc} />
+                    <SwiperSlide key={img.id}>
+                        <img width="250" height="300" src={img.imageSrc} />
                     </SwiperSlide>
                 ))}
             </Swiper>

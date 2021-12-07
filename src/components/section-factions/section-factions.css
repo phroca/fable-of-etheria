@@ -240,3 +240,66 @@ button {
         transform: translateY(20px);
     }
 }
+
+
+/*RESPONSIVE */
+
+@media(max-width: 640px) {
+    .container--factions--content {
+        height: 600vh;
+    }
+    .faction--title {
+        font-size: 30px;
+        max-width: 100%;
+    }
+    .container--factions--header {
+        margin-top: 100px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 1fr) auto;
+    }
+    .group--image img {
+        width: 130px;
+        height: 175px;
+    }
+    .container--factions--cta {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr) !important;
+    }
+    .cta--title {
+        font-size: 30px;
+    }
+    .container--factions--circles {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .circle--fundation {
+        width: 300px;
+        height: 300px;
+        grid-template-rows: 50px 150px;
+        grid-gap: 10px;
+    }
+    .fundation--title {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .fundation--text {
+        font-size: 18px;
+        font-weight: 100;
+        max-width: 250px;
+    }
+    .circle--alliance {
+        width: 300px;
+        height: 300px;
+        grid-template-rows: 50px 150px;
+        grid-gap: 10px;
+    }
+    .alliance--title {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .alliance--text {
+        font-size: 18px;
+        font-weight: 100;
+        max-width: 250px;
+    }
+}

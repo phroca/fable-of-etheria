@@ -103,3 +103,23 @@
     padding: 0;
     border-radius: 100%;
 }
+
+
+/*RESPONSIVE */
+
+@media(max-width: 640px) {
+    .section-discover>div {
+        padding: 150px 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .section-discover--subtitle {
+        font-size: 20px !important;
+    }
+    .section-discover--subtitle h2 {
+        margin: 0 auto;
+    }
+    .swiper-container {
+        width: 640px;
+    }
+}

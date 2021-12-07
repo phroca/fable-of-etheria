@@ -74,6 +74,11 @@ img{
     height: 300px;
     margin: 0 20px;
 }
+@media(max-width: 640px) {
+    img{
+        margin: 0px;
+    }
+}
 `
 
 const SectionIntro = () => {

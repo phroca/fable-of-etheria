@@ -147,3 +147,33 @@ body {
         background-position: 0% 70%;
     }
 }
+
+
+/*RESPONSIVE */
+
+@media(max-width: 640px) {
+    .hero--bg--fit {
+        transform: translate(-534px, 0px);
+    }
+    .hero--bg--fit>video {
+        width: 1444px;
+        height: 812px;
+    }
+    .hero--content {
+        padding: 200px 50px 0;
+        grid-template-rows: 200px 1fr;
+    }
+    .hero--title h1 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1080px) {
+    .hero--bg--fit {
+        transform: translate(-760px, 0px);
+    }
+    .hero--bg--fit>video {
+        width: 1820px;
+        height: 1024px;
+    }
+}

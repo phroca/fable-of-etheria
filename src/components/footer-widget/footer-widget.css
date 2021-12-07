@@ -53,3 +53,13 @@ button {
         transform: translateX(0);
     }
 }
+
+
+/*RESPONSIVE */
+
+@media(max-width: 640px) {
+    .footer--group--image img {
+        width: 130px;
+        height: 175px;
+    }
+}

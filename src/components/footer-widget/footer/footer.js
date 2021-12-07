@@ -12,6 +12,15 @@ const FooterGrid = styled.div`
         transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
         height: 200px;
         align-items: center;
+        @media(max-width: 640px) {
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr;
+            padding: 50px 0px;
+            height: unset;
+            align-content: center;
+            justify-items: center;
+            text-align: center;
+        }
     `
     const FooterLinks = styled.div`
         display: grid;
@@ -19,6 +28,10 @@ const FooterGrid = styled.div`
         justify-content: center;
         align-items: center;
         grid-gap: 40px;
+        @media(max-width: 640px) {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(3, 1fr);
+        }
     `
 
     const FooterDivider = styled.div`
@@ -35,6 +48,11 @@ const FooterGrid = styled.div`
         a.social--link {
             font-size: 20px;
         }
+
+        @media(max-width: 640px) {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(5, 1fr);
+        }
     `
     const FooterTeamLink = styled.div`
         display: grid;
@@ -49,12 +67,21 @@ const FooterGrid = styled.div`
             font-size: 18px;
 
         }
+        @media(max-width: 640px) {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(3, 1fr);
+            justify-self: center;
+        }
     `
     const FooterSubLinks = styled.div`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: center;
+        @media(max-width: 640px) {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, 1fr);
+        }
     `
     const FooterSiteInfo = styled.div`
         display: grid;

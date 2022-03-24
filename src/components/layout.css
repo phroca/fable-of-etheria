@@ -14,19 +14,22 @@ body {
 .hero--group {
     width: 100%;
     height: 100vh;
+    background: radial-gradient(46.13% 46.13% at 50% 69.53%, #6b75d0 0, #232256 100%);
 }
 
 
-/*VIDEO INTRO */
+/*PARTIE INTRO */
+
+
+/* CONTAINER */
 
 .intro--bg {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #000;
     transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -35,7 +38,6 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    transform: translate(0px, -71px);
 }
 
 .hero--bg--introVideo {
@@ -46,64 +48,331 @@ body {
 }
 
 
-/* HERO CONTENT*/
+/* IMAGES */
 
-.hero--content {
-    position: relative;
-    padding: 150px 50px 0;
-    display: grid;
-    grid-template-rows: 400px 1fr;
-    align-items: center;
-    justify-items: center;
-    height: 85vh;
+.hero--bg--fit .floating-item {
+    position: absolute;
 }
 
-.hero--title {
-    max-width: 500px;
-    text-align: center;
+.hero--bg--fit .floating-item.item-1 {
+    width: 9%;
+    left: 8%;
+    top: 14%;
+    animation: floating 10s linear infinite;
 }
 
-.hero--title h1 {
-    margin: 0;
-    color: white;
-    font-size: 70px;
-    line-height: 1.2;
-    opacity: 0;
-    animation: HeroAnimation;
-    animation-duration: 3s;
-    animation-delay: 0.1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+.hero--bg--fit .floating-item.item-2 {
+    width: 4%;
+    left: 27%;
+    top: 12%;
 }
 
-.hero--title h1 span {
-    background: linear-gradient(45deg, #002884, #78002E);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
+.hero--bg--fit .floating-item.item-3 {
+    width: 6%;
+    left: 14%;
+    top: 33%;
+    animation: floating 10s linear infinite;
 }
 
-.hero--subtitle {
-    max-width: 500px;
-    text-align: center;
-    align-self: start;
+.hero--bg--fit .floating-item.item-4 {
+    width: 7%;
+    right: 5%;
+    top: 55%;
+    animation: floating 10s linear infinite;
 }
 
-.hero--subtitle p {
-    font-weight: 100;
-    color: white;
+.hero--bg--fit .floating-item.item-5 {
+    width: 10%;
+    right: 15%;
+    top: 30%;
+    animation: light 30s linear infinite;
 }
 
-@keyframes HeroAnimation {
+.hero--bg--fit .floating-item.item-6 {
+    width: 20%;
+    right: 15%;
+    top: 10%;
+    animation: floating 10s linear infinite;
+}
+
+.hero--bg--fit .floating-item.item-6 {
+    width: 10%;
+    right: 5%;
+    top: 15%;
+    animation: light 45s linear infinite reverse;
+}
+
+@keyframes light {
     0% {
-        opacity: 0;
-        transform: translateY(20px);
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes float {
+    0% {
+        -webkit-transform: translatey(0);
+        transform: translatey(0)
+    }
+    50% {
+        -webkit-transform: translatey(-20px);
+        transform: translatey(-20px)
+    }
+    to {
+        -webkit-transform: translatey(0);
+        transform: translatey(0)
+    }
+}
+
+@keyframes floating {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    50% {
+        -webkit-transform: rotate(4deg);
+        transform: rotate(4deg)
+    }
+    to {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+}
+
+
+/* PERSOS */
+
+
+/*PERSO DROITE */
+
+.hero--persos-droite {
+    position: absolute;
+    width: 700px;
+    height: 850px;
+    top: 5%;
+    right: 15%;
+}
+
+.hero--persos-droite-container {
+    position: relative;
+    width: 700px;
+    height: 850px;
+}
+
+.hero--persos-droite--corps {
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    z-index: 4;
+    width: 500px;
+    animation: breathing 2s infinite;
+}
+
+.hero--persos-droite--tete {
+    position: absolute;
+    right: 31%;
+    top: 18%;
+    z-index: 4;
+    width: 200px;
+}
+
+.hero--persos-droite--main {
+    width: 130px;
+    position: absolute;
+    right: 67%;
+    top: 36%;
+    z-index: 6;
+    animation: shakingHands 0.1s infinite;
+}
+
+@keyframes breathing {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    50% {
+        -webkit-transform: scale(1.02);
+        transform: scale(1.02);
+    }
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes shakingHands {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    50% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
     }
     100% {
-        opacity: 1;
-        transform: translateY(00px);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
     }
 }
+
+
+/*PERSO GAUCHE*/
+
+.hero--persos-gauche {
+    position: absolute;
+    width: 700px;
+    height: 850px;
+    top: 5%;
+    left: 15%;
+}
+
+.hero--persos-gauche-container {
+    position: relative;
+    width: 700px;
+    height: 850px;
+}
+
+.hero--persos-gauche--corps {
+    position: absolute;
+    left: 5%;
+    top: 35%;
+    z-index: 4;
+    width: 500px;
+    animation: breathing 5s infinite;
+}
+
+.hero--persos-gauche--tete {
+    position: absolute;
+    left: 31%;
+    top: 18%;
+    z-index: 4;
+    width: 200px;
+}
+
+.hero--persos-gauche--main {
+    width: 130px;
+    position: absolute;
+    left: 67%;
+    top: 39%;
+    z-index: 6;
+    animation: shakingHands 0.3s infinite;
+}
+
+
+/* CRISTAL CENTRE */
+
+.hero--cristal-centre {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 25%;
+    right: 42%;
+}
+
+.hero--cristal-centre-pos {
+    width: 300px;
+}
+
+
+/*LIGHT */
+
+.light-cristal {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    top: 4%;
+    right: 28%;
+    background: radial-gradient(ellipse at center, rgba(159, 186, 255, 0.80) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%);
+    animation: flicker 8s infinite linear;
+}
+
+@keyframes flicker {
+    from {
+        opacity: 0.5;
+    }
+    4% {
+        opacity: 0.7;
+    }
+    8% {
+        opacity: 0.45;
+    }
+    12% {
+        opacity: 0.65;
+    }
+    16% {
+        opacity: 0.30;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    24% {
+        opacity: 0.6;
+    }
+    28% {
+        opacity: 0.25;
+    }
+    32% {
+        opacity: 0.30;
+    }
+    36% {
+        opacity: 0.55;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    44% {
+        opacity: 0.6;
+    }
+    48% {
+        opacity: 0.35;
+    }
+    52% {
+        opacity: 0.20;
+    }
+    56% {
+        opacity: 0.70;
+    }
+    60% {
+        opacity: 0.5;
+    }
+    64% {
+        opacity: 0.65;
+    }
+    68% {
+        opacity: .35;
+    }
+    72% {
+        opacity: 0.5;
+    }
+    76% {
+        opacity: 0.4;
+    }
+    80% {
+        opacity: .65;
+    }
+    84% {
+        opacity: 0.40;
+    }
+    88% {
+        opacity: 0.35;
+    }
+    92% {
+        opacity: 0.6;
+    }
+    96% {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+
+/* HERO CONTENT*/
 
 .foe--discord {
     position: fixed;

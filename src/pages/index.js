@@ -62,8 +62,8 @@ return(
               <img class="hero--persos-gauche--main" src={PersoGauchemain} alt=""></img>
             </div>
           </div>
+          <div class="light-cristal"></div>
           <div className="hero--cristal-centre">
-            <div class="light-cristal"></div>
             <img class="hero--cristal-centre-pos" src={cristalCentre} alt=""></img>
           </div>
         </div>

@@ -1,7 +1,4 @@
 import * as React from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {useRef, useEffect} from "react";
 
 import Layout from "../components/layout"
 import SectionDiscover from "../components/section-discover/section-discover"
@@ -30,9 +27,6 @@ import SectionRoadmap from "../components/section-roadmap/section-roadmap";
 
 
 const IndexPage = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-let container = document.querySelector("#scroll-container");
 
 return(
   <Layout>

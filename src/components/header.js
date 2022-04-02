@@ -4,9 +4,11 @@ import { Link } from "gatsby"
 import "./header.css"
 import menuIcon from "../images/menu.svg"
 import menuClose from "../images/close.svg"
-import darkIcon from "../images/dark-theme.svg"
-import lightIcon from "../images/light-theme.svg"
+import darkIcon from "../images/img-accueil/logo-sides/logo-bas-full.png"
+import lightIcon from "../images/img-accueil/logo-sides/logo-haut-full.png"
 import socialdata from "../../socialdata.json"
+import imgFableOfEtheriaMini from "../images/img-accueil/foe-transparent.png"
+import imgFableOfEtheria from "../images/img-accueil/logo-transparent.png"
 
 class Header extends React.Component {
   constructor(props){
@@ -46,7 +48,7 @@ class Header extends React.Component {
         <div className={`${this.state.isMenuOpened ? 'menu--enable': ''} menu--overlay`}>
           <div className="menu--container">
             <div className="menu--header">
-              <Link to="/"> The Fable of Etheria</Link>
+              <Link to="/"><img src={imgFableOfEtheriaMini} height="27" width="27" /></Link>
               <img className="btn-menu-close" src={menuClose} height="27" width="27" onClick={this.handleClickMenuClose}/>
             </div>
             <div className="menu--links">
@@ -73,16 +75,15 @@ class Header extends React.Component {
         </div>
         <div className={this.state.hasScrolled ? 'header header-scrolled' : 'header'}>
           <div className="header-group">
-          <Link to="/"> The Fable of Etheria</Link>
+          <Link to="/"><img src={imgFableOfEtheria} width="130" /></Link>
             <div className="nav-group-dark-light-mode">
-              <div className="dark" onClick={() => this.props.clickDark()}><img src={darkIcon} /></div>
+              <div className="dark" onClick={() => this.props.clickDark()}><img height="30" width="30" src={darkIcon} /></div>
               <div className="switch-theme">
                 <div className={this.props.darkMode ? 'interruptor dark-mode': 'interruptor light-mode'}></div>
               </div>
-              <div className="light" onClick={() => this.props.clickLight()}><img src={lightIcon} /></div>
+              <div className="light" onClick={() => this.props.clickLight()}><img height="30" width="30" src={lightIcon} /></div>
             </div>
             <div className="nav-group">
-              <div><span>Smart Contract</span></div>
               <img className="btn-menu-open" src={menuIcon} onClick={this.handleClickMenuOpen}/>
             </div>
           </div>

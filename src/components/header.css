@@ -15,7 +15,7 @@
     max-width: 80vw;
     margin: 0 200px;
     display: grid;
-    grid-template-columns: 200px 200px auto;
+    grid-template-columns: 200px auto 200px;
     align-items: center;
     justify-items: center;
 }
@@ -30,11 +30,12 @@
 
 .nav-group-dark-light-mode {
     position: relative;
-    width: 110px;
+    width: 130px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
     justify-items: center;
+    align-items: center;
 }
 
 .nav-group-dark-light-mode .switch-theme {
@@ -50,7 +51,7 @@
     height: 16px;
     background-color: white;
     border-radius: 100%;
-    top: 3px;
+    top: 10px;
     transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1)
 }
 
@@ -70,7 +71,6 @@
 
 .nav-group {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
     justify-items: center;
     align-items: center;

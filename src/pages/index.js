@@ -24,6 +24,7 @@ import PersoGauchemain from "../images/img-accueil/hero-persos/perso gauche/main
 import cristalCentre from "../images/img-accueil/crystaux flotants/crystal bleu 4.png"
 import SectionRoadmap from "../components/section-roadmap/section-roadmap";
 import SectionSeparator from "../components/section-separator/section-separator"
+import SectionPresentation from "../components/section-presentation/section-presentation"
 
 
 
@@ -65,6 +66,7 @@ return(
       </div>
     </div>
     <SectionSeparator />
+    <SectionPresentation />
     <SectionDiscover
       titleLineOne="Discover the "
       numberNFT="10010"

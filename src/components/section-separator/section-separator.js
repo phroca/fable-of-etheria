@@ -38,8 +38,6 @@ const SeparatorMarquee = styled.div`
 `
 
 const SectionSeparator = () => {
-
-
     return (
         <SeparatorContainer>
             <SeparatorText>

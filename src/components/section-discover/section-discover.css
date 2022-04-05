@@ -1,5 +1,5 @@
 .dark-mode .section-discover {
-    background: #00001F;
+    /*background: #00001F;*/
 }
 
 .light-mode .section-discover {
@@ -12,28 +12,6 @@
 
 .light-mode .section-discover--subtitle {
     color: #00001F;
-}
-
-.slider-navigation {
-    width: 90px;
-    position: relative;
-    margin-left: 1em;
-    padding: 0.5em;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;
-    opacity: .4;
-    transition: 250ms;
-    cursor: pointer;
-    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1)
-}
-
-.dark-mode .slider-navigation {
-    border: 1px solid #fff;
-}
-
-.light-mode .slider-navigation {
-    border: 1px solid #00001F;
 }
 
 .dark-mode .wrapper-icon-left,

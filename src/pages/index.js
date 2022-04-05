@@ -67,11 +67,7 @@ return(
     </div>
     <SectionSeparator />
     <SectionPresentation />
-    <SectionDiscover
-      titleLineOne="Discover the "
-      numberNFT="10010"
-      titleLineTwo="Etherias protagonists"
-    />
+    <SectionDiscover />
     <SectionIntro />
     <SectionFaction />
     <SectionRoadmap />

@@ -26,6 +26,12 @@ body {
     font-weight: bold;
 }
 
+@font-face {
+    font-family: "Handkerchief";
+    src: local("Handkerchief"), url('../font/handkerchief/handkerchief.ttf') format("truetype");
+    font-weight: normal;
+}
+
 
 /* HERO GROUP */
 

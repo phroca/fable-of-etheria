@@ -25,6 +25,7 @@ import cristalCentre from "../images/img-accueil/crystaux flotants/crystal bleu 
 import SectionRoadmap from "../components/section-roadmap/section-roadmap";
 import SectionSeparator from "../components/section-separator/section-separator"
 import SectionPresentation from "../components/section-presentation/section-presentation"
+import SectionSeparatorWarning from "../components/section-separator-warning/section-separator-warning"
 
 
 
@@ -68,6 +69,7 @@ return(
     <SectionSeparator />
     <SectionPresentation />
     <SectionDiscover />
+    <SectionSeparatorWarning />
     <SectionIntro />
     <SectionFaction />
     <SectionRoadmap />

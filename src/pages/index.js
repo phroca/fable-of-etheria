@@ -21,7 +21,7 @@ import PersoGaucheCorps from "../images/img-accueil/hero-persos/perso gauche/cor
 import PersoGaucheTete from "../images/img-accueil/hero-persos/perso gauche/tete gauche.png"
 import PersoGauchemain from "../images/img-accueil/hero-persos/perso gauche/main gauche.png"
 
-import cristalCentre from "../images/img-accueil/crystaux flotants/crystal bleu 4.png"
+import cristalCentre from "../images/img-accueil/crystaux flotants/crystal.png"
 import SectionRoadmap from "../components/section-roadmap/section-roadmap";
 import SectionSeparator from "../components/section-separator/section-separator"
 import SectionPresentation from "../components/section-presentation/section-presentation"
@@ -63,6 +63,9 @@ return(
           <div className="hero--cristal-centre">
             <img class="hero--cristal-centre-pos" src={cristalCentre} alt=""></img>
           </div>
+          <div class="hero--title-choose-side">
+            <h1>Choose your side</h1>
+          </div>
         </div>
       </div>
     </div>
@@ -70,9 +73,10 @@ return(
     <SectionPresentation />
     <SectionDiscover />
     <SectionSeparatorWarning />
+    <SectionRoadmap />
     <SectionIntro />
     <SectionFaction />
-    <SectionRoadmap />
+    
   </Layout>
 )
 }

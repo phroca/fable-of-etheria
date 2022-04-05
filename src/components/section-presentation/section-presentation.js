@@ -188,6 +188,53 @@ const PresentationCloud = styled.div`
     }
 `
 
+const FlashingLightGauche = styled.div`
+    position: absolute;
+    height: 0;
+    width: 50px;
+    border-top: 160vh solid rgba(255,255,255,0.9);
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    left: 200px;
+    transform-origin: 100% 100%;
+    animation: wavingLeft 8s linear infinite;
+
+    @keyframes wavingLeft {
+        0%{
+            transform: rotate3d(1, 1, 1, 0deg);
+        }
+        50%{
+            transform: rotate3d(1, 1, 1, 10deg);
+        }
+        100%{
+            transform: rotate3d(1, 1, 1, 0deg);
+        }
+    }
+`
+
+const FlashingLightDroite = styled.div`
+    position: absolute;
+    height: 0;
+    width: 50px;
+    border-top: 160vh solid rgba(255,255,255,0.9);
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    right: 200px;
+    transform-origin: 100% 100%;
+    animation: wavingRight 5s linear infinite;
+
+    @keyframes wavingRight {
+        0%{
+            transform: rotate3d(1, 1, 1, 350deg);
+        }
+        50%{
+            transform: rotate3d(1, 1, 1, 339deg);
+        }
+        100%{
+            transform: rotate3d(1, 1, 1, 350deg);
+        }
+    }
+`
 const SectionPresentation = () => {
 
 
@@ -219,6 +266,8 @@ const SectionPresentation = () => {
                 <Haute src={haute} />
                 <Basse src={basse} />
             </Cadre>
+            <FlashingLightGauche />
+            <FlashingLightDroite />
             <BasseVille src={basseVilleImg}/>
             <ImmeubleGauche src={immeubleGaucheImg}/>
             <ImmeubleDroite src={immeubleDroiteImg}/>

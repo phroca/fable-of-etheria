@@ -1,6 +1,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;500;900&display=swap');
     body {
-        font-family: 'Overpass', sans serif;
+        font-family: "Orbitron-Regular";
         -webkit-font-smoothing: antialiased;
         font-size: 18px;
         width: 100%;
@@ -505,16 +505,16 @@
     .hero--title-choose-side {
         display: grid;
         position: absolute;
-        top: 75vh;
-        right: 38%;
+        top: 80vh;
+        right: 28vw;
         grid-template-rows: auto;
         justify-content: center;
         align-items: center;
     }
     
     .hero--title-choose-side h1 {
-        font-family: "Handkerchief";
-        font-size: 87px;
+        font-family: "Orbitron-Regular";
+        font-size: 70px;
         color: white;
         text-align: center;
         text-transform: uppercase;
@@ -531,50 +531,6 @@
         }
         to {
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
-        }
-    }
-    /* HERO CONTENT*/
-    
-    .foe--discord {
-        position: fixed;
-        bottom: 50px;
-        right: 50px;
-        z-index: 900;
-    }
-    
-    .foe--discord button {
-        position: relative;
-        width: 150px;
-        height: 140px;
-        outline: none;
-        border-radius: 100%;
-        border: none;
-        color: white;
-        font-family: inherit;
-        font-size: 20px;
-        cursor: pointer;
-        background: linear-gradient(45deg, #002884, #78002E);
-        background-size: 200% 100%;
-        animation: GradientAnimation;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-    
-    .foe--discord button img {
-        justify-content: center;
-        align-items: center;
-    }
-    
-    @keyframes GradientAnimation {
-        0% {
-            background-position: 0% 70%;
-        }
-        50% {
-            background-position: 100% 30%;
-        }
-        100% {
-            background-position: 0% 70%;
         }
     }
     /*RESPONSIVE */

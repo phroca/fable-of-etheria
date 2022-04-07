@@ -101,7 +101,7 @@ const PresentationText = styled.div`
     padding-bottom: 100px;
 `
 const PresentationTitle = styled.h2`
-    font-family: "Handkerchief";
+    font-family: "Orbitron-Regular";
     font-size: 50px;
     color: white;
     text-transform: uppercase;

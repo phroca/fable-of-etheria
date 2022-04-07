@@ -28,11 +28,6 @@ class Layout extends React.Component {
       <>
         <Header darkMode={this.state.isDarkMode} clickDark={this.handleClickDark} clickLight={this.handleClickLight}/>
         <div>
-          <Link to="#" className="foe--discord">
-            <button>
-              <img height="120" width="120" src={discord} alt="discord" />
-            </button>
-          </Link>
           <main className={this.state.isDarkMode ? 'dark-mode': 'light-mode'}>{children}</main>
           <FooterWidget darkMode={this.state.isDarkMode ? 'dark-mode': 'light-mode'} />
           <Footer darkMode={this.state.isDarkMode ? 'dark-mode': 'light-mode'}/>

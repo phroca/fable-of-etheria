@@ -119,8 +119,8 @@ const StatInfo = styled.div`
 
 `
 const StatInfoTitle = styled.h2`
-    font-family: "Handkerchief";
-    font-size: 87px;
+    font-family: "Orbitron-Regular";
+    font-size: 75px;
     color: white;
     text-transform: uppercase;
     text-align: center;
@@ -165,8 +165,8 @@ const Particles = styled.div`
     height: 100%;
 `
 const PanelTitle = styled.div`
-    font-family: "Handkerchief";
-    font-size: 87px;
+    font-family: "Orbitron-Regular";
+    font-size: 70px;
     color: white;
     text-align: center;
 `
@@ -174,6 +174,7 @@ const PanelSubTitle = styled.h3`
     font-family :"Orbitron-Regular";
     font-size: 14px;
     color: white;
+    text-align: center;
 `
 
 const SectionDiscover = () => {
@@ -184,8 +185,7 @@ const SectionDiscover = () => {
         {x: 0},{    
             scrollTrigger: {
                 trigger: "#galleryLTR",
-                start: "top center",
-                end: "bottom 100px",
+                start: "top bottom",
                 scrub: 1
             },
             x: 400,
@@ -196,8 +196,7 @@ const SectionDiscover = () => {
         {x: 400},{    
             scrollTrigger: {
                 trigger: "#galleryRTL",
-                start: "top center",
-                end: "bottom 100px",
+                start: "top bottom",
                 scrub: 1              
             },
             x: 0,

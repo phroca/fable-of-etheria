@@ -29,19 +29,21 @@ const Cadre = styled.div`
 
 const CadreBackground = styled.div`
     position: absolute;
-    background: #30d126;
+    background: #dddddd;
     height: 950px;
     width: 450px;
     top: 100px;
-    box-shadow: 0 0 20px 80px #30d12625;
+    box-shadow: 0 0 50px gold,0 0 150px gold, inset 0 20px 20px 40px whitesmoke, inset 30px 0 35px 50px ivory;
     animation: clignotant 10s step-start infinite;
     @keyframes clignotant{
         0%,2%, 71%,73%, 98%{
-            opacity: 0;
+            background: #000000;
+            box-shadow: none;
         }
 
         1%,3%, 70%,72%, 99%, 100% {
-            opacity: 1;
+            background: #dddddd;
+            box-shadow: 0 0 50px gold,0 0 150px gold, inset 0 20px 20px 40px whitesmoke, inset 30px 0 35px 50px ivory;
         }
     }
 `
@@ -53,12 +55,14 @@ const Haute = styled.img`
     position: absolute;
     width: 200px;
     border-radius: 10px;
+    border: solid 2px black;
     top: 300px;
 `
 const Basse = styled.img`
     position: absolute;
     width: 200px;
     border-radius: 10px;
+    border: solid 2px black;
     top: 700px
 `
 

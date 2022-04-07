@@ -10,6 +10,7 @@ import cadreImg from "../../images/img-accueil/bordures/bordures/cadre.webp"
 import haute from "../../images/img-accueil/exemples-nft/haute.gif"
 import basse from "../../images/img-accueil/exemples-nft/basse.gif"
 import clouds from "../../images/img-accueil/clouds.webp"
+import light from "../../images/img-accueil/bordures/bordures/light.webp"
 
 const PresentationContainer = styled.div`
     height: 2900px;
@@ -188,14 +189,10 @@ const PresentationCloud = styled.div`
     }
 `
 
-const FlashingLightGauche = styled.div`
+const FlashingLightGauche = styled.img`
     position: absolute;
-    height: 0;
-    width: 50px;
-    border-top: 160vh solid rgba(255,255,255,0.9);
-    border-right: 20px solid transparent;
-    border-left: 20px solid transparent;
-    left: 200px;
+    left: 0px;
+    top: 650px;
     transform-origin: 100% 100%;
     animation: wavingLeft 8s linear infinite;
 
@@ -212,14 +209,10 @@ const FlashingLightGauche = styled.div`
     }
 `
 
-const FlashingLightDroite = styled.div`
+const FlashingLightDroite = styled.img`
     position: absolute;
-    height: 0;
-    width: 50px;
-    border-top: 160vh solid rgba(255,255,255,0.9);
-    border-right: 20px solid transparent;
-    border-left: 20px solid transparent;
-    right: 200px;
+    right: 0px;
+    top: 650px;
     transform-origin: 100% 100%;
     animation: wavingRight 5s linear infinite;
 
@@ -266,8 +259,8 @@ const SectionPresentation = () => {
                 <Haute src={haute} />
                 <Basse src={basse} />
             </Cadre>
-            <FlashingLightGauche />
-            <FlashingLightDroite />
+            <FlashingLightGauche src={light}/>
+            <FlashingLightDroite src={light}/>
             <BasseVille src={basseVilleImg}/>
             <ImmeubleGauche src={immeubleGaucheImg}/>
             <ImmeubleDroite src={immeubleDroiteImg}/>

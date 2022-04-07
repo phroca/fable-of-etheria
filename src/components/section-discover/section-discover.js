@@ -41,8 +41,15 @@ const SectionCard = styled.div`
     background: #0f2320;
     border-radius: 44px;
     border: 1.75px solid #101820;
-    box-shadow: 0 0 40px rgb(115 255 66 / 36%);
+    box-shadow: 0 0 40px rgb(66 255 0 / 67%);
+    animation: glow 3s linear infinite;
     min-height: 250px;
+    @keyframes glow {
+        50% {
+            box-shadow: 0 0 80px rgb(115 255 66 / 36%);
+        }
+
+    }
 `
 
 const SectionCardInner = styled.div`

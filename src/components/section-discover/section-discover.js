@@ -179,9 +179,7 @@ const SectionDiscover = () => {
                 trigger: "#galleryLTR",
                 start: "top center",
                 end: "bottom 100px",
-                scrub: 1,
-                markers: true
-                
+                scrub: 1
             },
             x: 400,
             duration: 3,
@@ -193,9 +191,7 @@ const SectionDiscover = () => {
                 trigger: "#galleryRTL",
                 start: "top center",
                 end: "bottom 100px",
-                scrub: 1,
-                markers: true
-                
+                scrub: 1              
             },
             x: 0,
             duration: 3,

@@ -181,7 +181,7 @@
         top: 35%;
         z-index: 4;
         width: 500px;
-        animation: breathing 2s infinite;
+        animation: breathing 3.5s infinite;
     }
     
     .hero--persos-droite--tete {
@@ -198,7 +198,8 @@
         right: 67%;
         top: 36%;
         z-index: 6;
-        animation: shakingHands 0.1s infinite;
+        animation: shakingHands 1s infinite;
+        transform-origin: 36% 80%;
     }
     
     @keyframes breathing {
@@ -279,6 +280,7 @@
         height: 400px;
         top: 25%;
         right: 45%;
+        z-index: 6;
     }
     
     .hero--cristal-centre-pos {

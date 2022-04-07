@@ -1,15 +1,15 @@
 import * as React from "react"
 import styled from "styled-components"
 
-import basseVilleImg from "../../images/img-accueil/bordures/bordures/basse ville entiere.png"
-import immeubleGaucheImg from "../../images/img-accueil/bordures/bordures/immeuble gauche.png"
-import immeubleDroiteImg from "../../images/img-accueil/bordures/bordures/immeuble droite.png"
-import solImg from "../../images/img-accueil/bordures/bordures/sol.png"
-import cadreImg from "../../images/img-accueil/bordures/bordures/cadre.png"
+import basseVilleImg from "../../images/img-accueil/bordures/bordures/basse ville entiere.webp"
+import immeubleGaucheImg from "../../images/img-accueil/bordures/bordures/immeuble gauche.webp"
+import immeubleDroiteImg from "../../images/img-accueil/bordures/bordures/immeuble droite.webp"
+import solImg from "../../images/img-accueil/bordures/bordures/sol.webp"
+import cadreImg from "../../images/img-accueil/bordures/bordures/cadre.webp"
 
 import haute from "../../images/img-accueil/exemples-nft/haute.gif"
 import basse from "../../images/img-accueil/exemples-nft/basse.gif"
-import clouds from "../../images/img-accueil/clouds.png"
+import clouds from "../../images/img-accueil/clouds.webp"
 
 const PresentationContainer = styled.div`
     height: 2900px;

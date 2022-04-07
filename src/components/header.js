@@ -4,11 +4,11 @@ import { Link } from "gatsby"
 import "./header.css"
 import menuIcon from "../images/menu.svg"
 import menuClose from "../images/close.svg"
-import darkIcon from "../images/img-accueil/logo-sides/logo-bas-full.png"
-import lightIcon from "../images/img-accueil/logo-sides/logo-haut-full.png"
+import darkIcon from "../images/img-accueil/logo-sides/logo-bas-full.webp"
+import lightIcon from "../images/img-accueil/logo-sides/logo-haut-full.webp"
 import socialdata from "../../socialdata.json"
-import imgFableOfEtheriaMini from "../images/img-accueil/foe-transparent.png"
-import imgFableOfEtheria from "../images/img-accueil/logo-transparent.png"
+import imgFableOfEtheriaMini from "../images/img-accueil/foe-transparent.webp"
+import imgFableOfEtheria from "../images/img-accueil/logo-transparent.webp"
 
 class Header extends React.Component {
   constructor(props){

@@ -4,15 +4,15 @@ import "./section-discover.css"
 
 import wall from "../../images/img-accueil/wall.webp"
 
-import img1 from "../../images/img-accueil/exemples-nft/53.png"
-import img2 from "../../images/img-accueil/exemples-nft/55.png"
-import img3 from "../../images/img-accueil/exemples-nft/58.png"
-import img4 from "../../images/img-accueil/exemples-nft/63.png"
+import img1 from "../../images/img-accueil/exemples-nft/53.webp"
+import img2 from "../../images/img-accueil/exemples-nft/55.webp"
+import img3 from "../../images/img-accueil/exemples-nft/58.webp"
+import img4 from "../../images/img-accueil/exemples-nft/63.webp"
 
-import img5 from "../../images/img-accueil/exemples-nft/4.png"
-import img6 from "../../images/img-accueil/exemples-nft/22.png"
-import img7 from "../../images/img-accueil/exemples-nft/5.png"
-import img8 from "../../images/img-accueil/exemples-nft/6.png"
+import img5 from "../../images/img-accueil/exemples-nft/4.webp"
+import img6 from "../../images/img-accueil/exemples-nft/22.webp"
+import img7 from "../../images/img-accueil/exemples-nft/5.webp"
+import img8 from "../../images/img-accueil/exemples-nft/6.webp"
 
 const SectionGroup = styled.div`
     position: relative;
@@ -187,7 +187,7 @@ const SectionDiscover = () => {
                         </SectionCardTitle>
                         <SectionCardText >
                             - use $ to purchase futures collectibles for your etherians and upgrades<br/>
-                            - $ ise the utility token for the Fable of Etherians ecosystem.
+                            - $ is the utility token for the Fable of Etherians ecosystem.
                         </SectionCardText>
                     </SectionCardInner>
                 </SectionCard>

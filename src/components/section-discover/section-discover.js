@@ -1,5 +1,9 @@
-import * as React from "react"
-import styled from "styled-components"
+import * as React from "react";
+import styled from "styled-components";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useRef, useEffect } from "react";
+
 import "./section-discover.css"
 
 import wall from "../../images/img-accueil/wall.webp"
@@ -166,8 +170,42 @@ const PanelSubTitle = styled.h3`
 `
 
 const SectionDiscover = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+        gsap.fromTo("#galleryLTR",
+        {x: 0},{    
+            scrollTrigger: {
+                trigger: "#galleryLTR",
+                start: "top center",
+                end: "bottom 100px",
+                scrub: 1,
+                markers: true
+                
+            },
+            x: 400,
+            duration: 3,
+        });
+    
+        gsap.fromTo("#galleryRTL",
+        {x: 400},{    
+            scrollTrigger: {
+                trigger: "#galleryRTL",
+                start: "top center",
+                end: "bottom 100px",
+                scrub: 1,
+                markers: true
+                
+            },
+            x: 0,
+            duration: 3,
+        });
+    })
+
+
+
     return(
-        <SectionGroup>
+        <SectionGroup >
             <SectionHeading>
                 <SectionCard className="section-discover--subtitle">
                     <SectionCardInner>
@@ -206,8 +244,8 @@ const SectionDiscover = () => {
             </SectionHeading>
             <SectionStats>
                 <StatWrapper>
-                    <StatGallery>
-                        <StatGalleryCard>
+                    <StatGallery id="galleryLTR">
+                        <StatGalleryCard >
                             <CardPhoto src={img1}></CardPhoto>
                         </StatGalleryCard>
                         <StatGalleryCard>
@@ -266,7 +304,7 @@ const SectionDiscover = () => {
                             </StatInfoPanel>
                         </StatInfoPanels>
                     </StatInfo>
-                    <StatGallery>
+                    <StatGallery id="galleryRTL">
                         <StatGalleryCard>
                             <CardPhoto src={img5}></CardPhoto>
                         </StatGalleryCard>

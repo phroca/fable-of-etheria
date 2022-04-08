@@ -16,7 +16,17 @@ const PresentationContainer = styled.div`
     height: 2900px;
     background: #00001F;
     position: relative;
+    @media(max-width: 640px) {
+        height: 1200px;
+    }
     
+    @media (min-width: 640px) and (max-width: 1080px) {
+        height: 1400px;
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        height: 1800px;
+    }
 `
 
 const Cadre = styled.div`
@@ -30,9 +40,9 @@ const Cadre = styled.div`
 const CadreBackground = styled.div`
     position: absolute;
     background: #dddddd;
-    height: 950px;
-    width: 450px;
-    top: 100px;
+    height: 47vw;
+    width: 23vw;
+    top: 6vw;
     box-shadow: 0 0 50px gold,0 0 150px gold, inset 0 20px 20px 40px whitesmoke, inset 30px 0 35px 50px ivory;
     animation: clignotant 10s step-start infinite;
     @keyframes clignotant{
@@ -49,21 +59,21 @@ const CadreBackground = styled.div`
 `
 const CadreContainer = styled.img`
     position: absolute;
-    width: 800px;
+    width: 40vw;
 `
 const Haute = styled.img`
     position: absolute;
-    width: 200px;
+    width: 10vw;
     border-radius: 10px;
     border: solid 2px black;
-    top: 300px;
+    top: 15vw;
 `
 const Basse = styled.img`
     position: absolute;
-    width: 200px;
+    width: 10vw;
     border-radius: 10px;
     border: solid 2px black;
-    top: 700px
+    top: 35vw;
 `
 
 const BasseVille = styled.img`
@@ -74,18 +84,17 @@ const BasseVille = styled.img`
 const ImmeubleGauche = styled.img`
     position: absolute;
     left:0;
-    height: 1500px;
+    height: 75vw;
     z-index:1;
 `
 const ImmeubleDroite = styled.img`
     position: absolute;
     right: 0;
-    height: 1500px;
+    height: 75vw;
     z-index:1;
 `
 const Sol = styled.img`
     position: absolute;
-    bottom: -845px;
     z-index:1;
     width: 100%;
 `
@@ -105,6 +114,7 @@ const PresentationTitle = styled.h2`
     font-size: 50px;
     color: white;
     text-transform: uppercase;
+    text-align: center;
 `
 const PresentationSub = styled.p`
     font-family :"Orbitron-Regular";
@@ -196,10 +206,21 @@ const PresentationCloud = styled.div`
 const FlashingLightGauche = styled.img`
     position: absolute;
     left: 0px;
-    top: 650px;
+    top: 35vw;
+    height: 80vw;
     transform-origin: 100% 100%;
     animation: wavingLeft 8s linear infinite;
-
+    @media(max-width: 640px) {
+        top: 150vw;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        top: 60vw;
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
     @keyframes wavingLeft {
         0%{
             transform: rotate3d(1, 1, 1, 0deg);
@@ -216,10 +237,22 @@ const FlashingLightGauche = styled.img`
 const FlashingLightDroite = styled.img`
     position: absolute;
     right: 0px;
-    top: 650px;
+    top: 35vw;
+    height: 80vw;
     transform-origin: 100% 100%;
     animation: wavingRight 5s linear infinite;
 
+    @media(max-width: 640px) {
+        top: 150vw;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        top: 60vw;
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
     @keyframes wavingRight {
         0%{
             transform: rotate3d(1, 1, 1, 350deg);

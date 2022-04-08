@@ -24,6 +24,19 @@ const SectionGroup = styled.div`
     height: 2500px;
     background: url(${wall}) center center;
     z-index: -1;
+
+    @media(max-width: 640px) {
+        height: 2300px;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
+
 `
 
 const SectionHeading = styled.div`
@@ -37,7 +50,7 @@ const SectionHeading = styled.div`
     @media(max-width: 640px) {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3,1fr);
-        padding: 100px 50px;
+        padding: 100px 10px;
     }
     
     @media (min-width: 640px) and (max-width: 1080px) {
@@ -65,8 +78,8 @@ const SectionCard = styled.div`
     }
 
     @media(max-width: 640px) {
-        max-width: 200px;
-        min-height: 200px;
+        width: 260px;
+        height: 260px;
     }
     
     @media (min-width: 640px) and (max-width: 1080px) {
@@ -91,7 +104,7 @@ const SectionCardTitle = styled.h2`
     color: white;
     text-align: center;
     @media(max-width: 640px) {
-        font-size: 16px;
+        font-size: 25px;
     }
     
     @media (min-width: 640px) and (max-width: 1080px) {
@@ -126,6 +139,17 @@ const SectionStats = styled.div`
     padding: 90px 0 100px;
     position: relative;
     overflow: hidden;
+    @media(max-width: 640px) {
+        padding: 0;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
 `
 const StatWrapper = styled.div`
     width: inherit;
@@ -144,6 +168,7 @@ const StatGallery = styled.div`
     padding: 65px 0;
     @media(max-width: 640px) {
         grid-template-columns: repeat(4,auto);
+        padding: 50px 0;
     }
     
     @media (min-width: 640px) and (max-width: 1080px) {
@@ -164,8 +189,8 @@ const StatGalleryCard = styled.div`
     border: 2px solid #101820;
     position: relative;
     @media(max-width: 640px) {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
     }
     
     @media (min-width: 640px) and (max-width: 1080px) {
@@ -183,8 +208,8 @@ const CardPhoto = styled.img`
     height: 280px;
     border-radius: 20px;
     @media(max-width: 640px) {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
     }
     
     @media (min-width: 640px) and (max-width: 1080px) {
@@ -250,8 +275,8 @@ const StatInfoPanel = styled.div`
     padding: 4px;
     position: relative;
     @media(max-width: 640px) {
-        height: unset;
-        width: unset;
+        height: 150px;
+        width: 300px;
     }
     
     @media (min-width: 640px) and (max-width: 1080px) {
@@ -286,6 +311,9 @@ const PanelTitle = styled.div`
     font-size: 70px;
     color: white;
     text-align: center;
+    @media(max-width: 640px) {
+        font-size: 50px;
+    }
 `
 const PanelSubTitle = styled.h3`
     font-family :"Orbitron-Regular";

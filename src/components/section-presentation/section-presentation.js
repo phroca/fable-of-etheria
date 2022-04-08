@@ -125,6 +125,7 @@ const PresentationSub = styled.p`
     font-size: 16px;
     color: white;
     text-align: center;
+    margin: auto 30px;
 `
 
 const PresentationSky = styled.div`

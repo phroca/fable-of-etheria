@@ -23,6 +23,7 @@ const SectionGroup = styled.div`
     transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
     height: 2500px;
     background: url(${wall}) center center;
+    z-index: -1;
 `
 
 const SectionHeading = styled.div`

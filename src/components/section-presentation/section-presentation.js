@@ -115,6 +115,10 @@ const PresentationTitle = styled.h2`
     color: white;
     text-transform: uppercase;
     text-align: center;
+    @media(max-width: 640px) {
+        font-size: 50px;
+    }
+
 `
 const PresentationSub = styled.p`
     font-family :"Orbitron-Regular";

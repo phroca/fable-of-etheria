@@ -56,6 +56,14 @@
         top: 0;
         left: 0;
         width: 100%;
+        height: inherit;
+    }
+    
+    .hero--bg--fit>img {
+        border: 0;
+        max-width: 100%;
+        height: auto;
+        position: absolute;
     }
     /* STARS */
     

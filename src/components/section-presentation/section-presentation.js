@@ -211,7 +211,7 @@ const FlashingLightGauche = styled.img`
     transform-origin: 100% 100%;
     animation: wavingLeft 8s linear infinite;
     @media(max-width: 640px) {
-        top: 150vw;
+        top: 180vw;
     }
     
     @media (min-width: 640px) and (max-width: 1080px) {
@@ -243,7 +243,7 @@ const FlashingLightDroite = styled.img`
     animation: wavingRight 5s linear infinite;
 
     @media(max-width: 640px) {
-        top: 150vw;
+        top: 180vw;
     }
     
     @media (min-width: 640px) and (max-width: 1080px) {

@@ -33,7 +33,19 @@ const SectionHeading = styled.div`
     align-items: center;
     justify-content: center;
     grid-gap: 30px;
-
+    @media(max-width: 640px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        padding: 100px 50px;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
 `
 
 const SectionCard = styled.div`
@@ -50,6 +62,19 @@ const SectionCard = styled.div`
         }
 
     }
+
+    @media(max-width: 640px) {
+        max-width: 200px;
+        min-height: 200px;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
 `
 
 const SectionCardInner = styled.div`
@@ -64,12 +89,34 @@ const SectionCardTitle = styled.h2`
     font-size: 30px;
     color: white;
     text-align: center;
+    @media(max-width: 640px) {
+        font-size: 16px;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
 
 `
 const SectionCardText = styled.p`
     font-family :"Orbitron-Regular";
     font-size: 16px;
     color: white;
+    @media(max-width: 640px) {
+        font-size: 12px;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
 `
 
 const SectionStats = styled.div`
@@ -94,6 +141,17 @@ const StatGallery = styled.div`
     position: relative;
     z-index: 9;
     padding: 65px 0;
+    @media(max-width: 640px) {
+        grid-template-columns: repeat(4,auto);
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
 `
 const StatGalleryCard = styled.div`
     margin-right: 25px;
@@ -104,6 +162,18 @@ const StatGalleryCard = styled.div`
     border-radius: 10%;
     border: 2px solid #101820;
     position: relative;
+    @media(max-width: 640px) {
+        width: 100px;
+        height: 100px;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
 }
 `
 const CardPhoto = styled.img`
@@ -111,6 +181,18 @@ const CardPhoto = styled.img`
     width: 280px;
     height: 280px;
     border-radius: 20px;
+    @media(max-width: 640px) {
+        width: 100px;
+        height: 100px;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
 `
 const StatInfo = styled.div`
     display: grid;
@@ -124,13 +206,35 @@ const StatInfoTitle = styled.h2`
     color: white;
     text-transform: uppercase;
     text-align: center;
-
+    @media(max-width: 640px) {
+        font-size: 45px;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
 `
 const StatInfoPanels = styled.div`
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-gap: 10px;
     justify-items: center;
+    @media(max-width: 640px) {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
 `
 
 const StatInfoPanel = styled.div`
@@ -144,6 +248,18 @@ const StatInfoPanel = styled.div`
     background-color: #627379;
     padding: 4px;
     position: relative;
+    @media(max-width: 640px) {
+        height: unset;
+        width: unset;
+    }
+    
+    @media (min-width: 640px) and (max-width: 1080px) {
+        
+    }
+    
+    @media (min-width: 1080px) and (max-width: 1440px) {
+        
+    }
 `
 const PanelWrapper = styled.div`
     overflow: hidden;
@@ -188,19 +304,19 @@ const SectionDiscover = () => {
                 start: "top bottom",
                 scrub: 1
             },
-            x: 400,
-            duration: 3,
+            x: 100,
+            duration: 10,
         });
     
         gsap.fromTo("#galleryRTL",
-        {x: 400},{    
+        {x: 100},{    
             scrollTrigger: {
                 trigger: "#galleryRTL",
                 start: "top bottom",
                 scrub: 1              
             },
             x: 0,
-            duration: 3,
+            duration: 10,
         });
     })
 

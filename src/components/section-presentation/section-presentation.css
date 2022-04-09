@@ -1,0 +1,31 @@
+.dark-mode .bg-presentation {
+    background: #00001F;
+}
+
+.light-mode .bg-presentation {
+    background: center / cover no-repeat url('../../images/img-accueil/bordures/bordures/background-light.webp');
+}
+
+.dark-mode .flashing-light {
+    display: block;
+}
+
+.light-mode .flashing-light {
+    display: none;
+}
+
+.dark-mode .cadre {
+    visibility: visible;
+}
+
+.light-mode .cadre {
+    visibility: hidden;
+}
+
+.dark-mode .img-light {
+    visibility: hidden;
+}
+
+.light-mode .img-light {
+    visibility: visible;
+}

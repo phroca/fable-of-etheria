@@ -6,6 +6,7 @@
         width: 100%;
         height: 100%;
         margin: 0;
+        transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
     
     @font-face {
@@ -33,10 +34,16 @@
     }
     /* HERO GROUP */
     
-    .hero--group {
+    .dark-mode .hero--group {
         width: 100%;
         height: 100vh;
         background: radial-gradient(46.13% 46.13% at 50% 69.53%, #343b75 0, #000000 100%);
+    }
+    
+    .light-mode .hero--group {
+        width: 100%;
+        height: 100vh;
+        background: center / cover no-repeat url('../images/img-accueil/bg-haute.webp');
     }
     /*PARTIE INTRO */
     /* CONTAINER */
@@ -57,13 +64,6 @@
         left: 0;
         width: 100%;
         height: inherit;
-    }
-    
-    .hero--bg--fit>img {
-        border: 0;
-        max-width: 100%;
-        height: auto;
-        position: absolute;
     }
     /* STARS */
     
@@ -540,27 +540,65 @@
             background: radial-gradient(46.13% 46.13% at 50% 48.53%, #343b75 0, #000000 100%);
         }
         .hero--persos-droite {
-            top: 40vw;
+            top: 73vw;
             right: 9vw;
         }
+        .hero--persos-droite--corps {
+            right: 2vw;
+            top: 17vw;
+            width: 30.5vw;
+        }
+        .hero--persos-droite--tete {
+            right: 13vw;
+            top: 5vw;
+            width: 14vw;
+        }
+        .hero--persos-droite--main {
+            width: 8vw;
+            right: 28.3vw;
+            top: 17vw;
+        }
         .hero--persos-gauche {
-            top: 40vw;
+            top: 73vw;
             left: 10vw;
         }
+        .hero--persos-gauche--corps {
+            left: 3vw;
+            top: 16vw;
+            width: 30.5vw;
+        }
+        .hero--persos-gauche--tete {
+            left: 13vw;
+            top: 4vw;
+            width: 14vw;
+        }
+        .hero--persos-gauche--main {
+            width: 8vw;
+            left: 30vw;
+            top: 18vw;
+        }
         .hero--cristal-centre {
-            top: 50vw;
+            top: 55vw;
+            right: 34vw;
+            width: 27vw;
+            height: 51vw;
         }
         .hero--cristal-centre-pos {
-            width: 12vw;
+            width: 24vw;
         }
         .light-cristal {
-            width: 50vw;
-            height: 50vw;
+            width: 90vw;
+            height: 90vw;
             top: 40vw;
-            right: 24vw;
+            right: 2vw;
         }
         .hero--title-choose-side {
-            top: 100vw;
+            top: 135vw;
+            right: 0;
+        }
+        .hero--title-choose-side h1 {
+            font-size: 40px;
+            margin: auto 30px;
         }
     }
     

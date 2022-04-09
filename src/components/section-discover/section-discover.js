@@ -24,19 +24,6 @@ const SectionGroup = styled.div`
     height: 2500px;
     background: url(${wall}) center center;
     z-index: -1;
-
-    @media(max-width: 640px) {
-        height: 2300px;
-    }
-    
-    @media (min-width: 640px) and (max-width: 1080px) {
-        
-    }
-    
-    @media (min-width: 1080px) and (max-width: 1440px) {
-        
-    }
-
 `
 
 const SectionHeading = styled.div`
@@ -50,7 +37,7 @@ const SectionHeading = styled.div`
     @media(max-width: 640px) {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3,1fr);
-        padding: 100px 10px;
+        padding: 200px 10px 100px;
     }
     
     @media (min-width: 640px) and (max-width: 1080px) {

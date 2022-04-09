@@ -146,6 +146,7 @@ const Cadre = styled.div`
     display: grid;
     justify-content: center;
     justify-items: center;
+    z-index: 2;
 }
 `
 
@@ -327,6 +328,7 @@ const FlashingLightGauche = styled.img`
     height: 80vw;
     transform-origin: 100% 100%;
     animation: wavingLeft 8s linear infinite;
+    z-index: 1;
     @media(max-width: 640px) {
         top: 180vw;
     }
@@ -358,7 +360,7 @@ const FlashingLightDroite = styled.img`
     height: 80vw;
     transform-origin: 100% 100%;
     animation: wavingRight 5s linear infinite;
-
+    z-index: 1;
     @media(max-width: 640px) {
         top: 180vw;
     }

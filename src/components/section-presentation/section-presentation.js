@@ -24,7 +24,7 @@ import thing3 from "../../images/img-accueil/bordures/bordures/thing3.webp"
 import "./section-presentation.css"
 
 const PresentationContainer = styled.div`
-    height: 2900px;
+    height: 150vw;
     position: relative;
     transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
     @media(max-width: 640px) {

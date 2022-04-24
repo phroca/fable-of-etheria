@@ -14,19 +14,15 @@ class Layout extends React.Component {
     }
   }
 
-  handleClickDark = () =>{
-    this.setState({isDarkMode: true})
-  }
-
-  handleClickLight = () =>{
-    this.setState({isDarkMode: false})
+  handleClickDarkLight = () =>{
+    this.setState({isDarkMode: !this.state.isDarkMode});
   }
 
   render() {
     const {children} = this.props;
     return(
       <>
-        <Header darkMode={this.state.isDarkMode} clickDark={this.handleClickDark} clickLight={this.handleClickLight}/>
+        <Header darkMode={this.state.isDarkMode} clickDarkLight={this.handleClickDarkLight}/>
         <div>
           <main className={this.state.isDarkMode ? 'dark-mode': 'light-mode'}>{children}</main>
           {/* <FooterWidget darkMode={this.state.isDarkMode ? 'dark-mode': 'light-mode'} />

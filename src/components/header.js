@@ -76,12 +76,12 @@ class Header extends React.Component {
         <div className={this.state.hasScrolled ? 'header header-scrolled' : 'header'}>
           <div className="header-group">
           <Link to="/"><img src={imgFableOfEtheria} width="130" /></Link>
-            <div className="nav-group-dark-light-mode">
-              <div className="dark" onClick={() => this.props.clickDark()}><img height="30" width="30" src={darkIcon} /></div>
+            <div className="nav-group-dark-light-mode" onClick={() => this.props.clickDarkLight()}>
+              <div className="dark"><img height="30" width="30" src={darkIcon} /></div>
               <div className="switch-theme">
                 <div className={this.props.darkMode ? 'interruptor dark-mode': 'interruptor light-mode'}></div>
               </div>
-              <div className="light" onClick={() => this.props.clickLight()}><img height="30" width="30" src={lightIcon} /></div>
+              <div className="light"><img height="30" width="30" src={lightIcon} /></div>
             </div>
             <div className="nav-group">
               <img className="btn-menu-open" src={menuIcon} onClick={this.handleClickMenuOpen}/>

@@ -51,7 +51,7 @@
     height: 16px;
     background-color: white;
     border-radius: 100%;
-    top: 10px;
+    top: 9px;
     transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1)
 }
 

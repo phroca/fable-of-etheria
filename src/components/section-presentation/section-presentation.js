@@ -34,10 +34,6 @@ const PresentationContainer = styled.div`
     @media (min-width: 640px) and (max-width: 1080px) {
         height: 1400px;
     }
-    
-    @media (min-width: 1080px) and (max-width: 1440px) {
-        height: 1800px;
-    }
 `
 const PresentationShips = styled.div`
     position: absolute;

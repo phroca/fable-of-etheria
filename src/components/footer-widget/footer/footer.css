@@ -1,12 +1,16 @@
-.dark-mode.footer--grid {
+/*.dark-mode*/
+
+.footer--grid {
     background: #00001F;
     color: white;
 }
 
+
+/*
 .light-mode.footer--grid {
     background: #FFFFFF;
     color: #00001F;
-}
+}*/
 
 .home--link {
     font-size: 24px;
@@ -20,6 +24,8 @@ a {
     text-decoration: none;
 }
 
+
+/*
 .light-mode.footer--grid a,
 .light-mode.footer--grid p {
     color: #00001F;
@@ -29,15 +35,26 @@ a {
 .dark-mode.footer--grid p {
     color: white;
     opacity: .95;
+}*/
+
+.footer--grid a,
+.footer--grid p {
+    color: white;
+    opacity: .95;
 }
 
-.dark-mode .footer--divider {
+
+/*.dark-mode*/
+
+.footer--divider {
     background: #FFFFFF;
 }
 
+
+/*
 .light-mode .footer--divider {
     background: #00001F;
-}
+}*/
 
 .footer--grid a.privacy--link {
     font-size: 18px;

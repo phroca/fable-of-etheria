@@ -1,8 +1,12 @@
-.dark-mode .section-intro {
-    background: #00001F;
+/*.dark-mode*/
+
+.section-intro {
     color: white;
+    background: radial-gradient(46.13% 46.13% at 50% 69.53%, #343b75 0, #000000 100%);
 }
 
+
+/*
 .light-mode .section-intro {
     background: #FFFFFF;
     color: #00001F;
@@ -17,31 +21,7 @@
 .light-mode .section-intro--about {
     color: #00001F;
 }
-
-.section-intro>div .sig-img-1 {
-    width: 202px;
-    height: 234px;
-    margin-top: 60px;
-    align-self: start;
-    justify-self: end;
-}
-
-.section-intro>div .sig-img-2 {
-    width: 519px;
-    height: 668px;
-}
-
-.section-intro>div .sig-img-3 {
-    width: 279px;
-    height: 327px;
-    align-self: center;
-    justify-self: start;
-}
-
-.section-intro>div img {
-    width: 100%;
-    height: 100%
-}
+*/
 
 
 /*RESPONSIVE */
@@ -49,8 +29,9 @@
 @media(max-width: 640px) {
     .section-intro>div {
         padding: 50px 40px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        justify-content: center;
     }
     .section-intro--subtitle {
         max-width: 300px;
@@ -59,12 +40,13 @@
     .introduce--subtitle-2 {
         font-size: 30px !important;
     }
-    .section-intro--about button {
-        width: 80px;
-        height: 80px;
+    .section-intro--about {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
     }
     .section-intro--groupImage {
-        grid-template-rows: repeat(3, 1fr) !important;
+        grid-template-columns: auto !important;
+        grid-template-rows: repeat(2, auto) !important;
     }
     .section-intro>div .sig-img-1 {
         justify-self: center;

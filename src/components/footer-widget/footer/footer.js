@@ -6,6 +6,7 @@ import "./footer.css"
 
 const FooterGrid = styled.div`
         background: #00001F;
+        color: white;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         padding: 50px 200px;

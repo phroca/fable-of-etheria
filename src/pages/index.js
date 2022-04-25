@@ -18,6 +18,7 @@ import cristalCentre from "../images/img-accueil/crystaux flotants/crystal.webp"
 import SectionSeparator from "../components/section-separator/section-separator"
 import SectionPresentation from "../components/section-presentation/section-presentation"
 import SectionSeparatorWarning from "../components/section-separator-warning/section-separator-warning"
+import SectionAbout from "../components/section-about/section-about"
 
 
 
@@ -74,10 +75,8 @@ return(
     <SectionPresentation />
     <SectionDiscover />
     <SectionSeparatorWarning />
-    {/* <SectionRoadmap />
-    <SectionIntro />
-    <SectionFaction /> */}
-    
+    {/* <SectionRoadmap />*/}
+    <SectionAbout /> 
   </Layout>
 )
 }

@@ -1,12 +1,17 @@
-.dark-mode.footer--container {
+/*.dark-mode*/
+
+.footer--container {
     background: #00001F;
     color: white;
 }
 
+
+/*
 .light-mode.footer--container {
     background: #FFFFFF;
     color: #00001F;
 }
+*/
 
 button {
     width: 150px;

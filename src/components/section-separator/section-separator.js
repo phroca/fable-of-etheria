@@ -7,6 +7,9 @@ const SeparatorContainer = styled.div`
     height: 100px;
     display: grid;
     align-items: center;
+    @media(max-width: 640px) {
+        height: 65px;
+    }
 `
 
 const SeparatorText = styled.div`

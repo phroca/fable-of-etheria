@@ -15,7 +15,7 @@
     max-width: 80vw;
     margin: 0 200px;
     display: grid;
-    grid-template-columns: 200px auto 200px;
+    grid-template-columns: 200px auto 230px;
     align-items: center;
     justify-items: center;
 }
@@ -203,6 +203,8 @@
     }
     .nav-group {
         grid-template-columns: auto;
+        font-size: 10px;
+        text-align: center;
     }
     .nav-group div span {
         display: none;

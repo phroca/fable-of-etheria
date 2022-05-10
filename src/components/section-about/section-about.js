@@ -32,7 +32,7 @@ const SectionTitle = styled.h2`
 
 const SectionAboutContainer = styled.div`
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     align-items: center;
     justify-items: center;
     grid-gap: 50px;
@@ -40,7 +40,7 @@ const SectionAboutContainer = styled.div`
 
 const SectionGroupImage = styled.div`
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
    
 `
@@ -121,8 +121,6 @@ const SectionAbout = () => {
                                 <img src={twitter} alt="twitter" />
                             </Social>
                         </ImageContainer>
-                    </SectionGroupImage>
-                    <SectionGroupImage className="section-intro--groupImage" >
                         <ImageContainer>
                             <Image src={img3} />
                             <UserNameContainer>

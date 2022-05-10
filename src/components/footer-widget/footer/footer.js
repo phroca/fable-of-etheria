@@ -107,14 +107,14 @@ const Footer = ({darkMode}) => (
             <FooterLinks>
                 <Link className="home--link" to="/">The Fable of Etheria</Link>
                 <FooterSocialLink className="footer--social--link">
-                    {socialdata.socialLink.map( sl => (
+                    {/* {socialdata.socialLink.map( sl => (
                         <a className="social--link" key={sl.id} href={sl.link}>{sl.title}</a>
-                    ))}
+                    ))} */}
                 </FooterSocialLink>
                 <FooterTeamLink>
-                    {socialdata.teamLink.map( sl => (
+                    {/* {socialdata.teamLink.map( sl => (
                         <a className="team--link" key={sl.id} href={sl.link}>{sl.title}</a>
-                    ))}
+                    ))} */}
                 </FooterTeamLink>
             </FooterLinks>
             <FooterDivider className="footer--divider"/>
@@ -124,9 +124,9 @@ const Footer = ({darkMode}) => (
                     <p>Designed by ROCA IT</p>
                 </FooterSiteInfo>
                 <FooterPolicies>
-                    {socialdata.privacyLink.map( sl => (
+                    {/* {socialdata.privacyLink.map( sl => (
                         <a className="privacy--link" key={sl.id} href={sl.link}>{sl.title}</a>
-                    ))}
+                    ))} */}
                 </FooterPolicies>
             </FooterSubLinks>
         </FooterGrid>

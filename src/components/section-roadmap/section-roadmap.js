@@ -1,76 +1,61 @@
 import * as React from "react"
-import {useRef, useEffect} from "react";
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import styled from "styled-components"
 
-import "./section-roadmap.css"
 import roadmap from "../../../roadmapdata.json"
-
+import leftDoor from "../../images/roadmap/porte-gauche.webp"
+import rightDoor from "../../images/roadmap/porte-droite.webp"
+import couloir from "../../images/roadmap/couloir.webp"
 // ffmpeg -i ./roadmap.mp4 -movflags faststart -vcodec libx264 -crf 23 -g 1 -pix_fmt yuv420p output.mp4
 // ffmpeg -i ./roadmap.mp4 -vf scale=960:-1 -movflags faststart -vcodec libx264 -crf 20 -g 1 -pix_fmt yuv420p output_960.mp4
 
+const RoadmapContainer = styled.div`
+    position: relative;
+    z-index: 0;
+    background: black;
+    height: 50vw;
+    @media(max-width: 640px) {
+        height: 70vw;
+    }
+`
+const RoadmapDoors = styled.div`
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto;
+    z-index: 2;
+    @media(max-width: 640px) {
+        margin-top: 65px;
+    }
+`
+const RoadmapLeftDoor = styled.img`
+    position: absolute;
+    height: 70vw;
+    left:0;
+    // left: 13vw;
+`
+const RoadmapRightDoor = styled.img`
+    position: absolute;
+    height: 70vw;
+    right: 0;
+    // right:13vw;
+`
+const RoadmapCouloir = styled.img`
+    position: absolute;
+    height: 70vw;
+    right:0;
+    z-index: 1;
+`
+
 const SectionRoadmap = () => {
-    gsap.registerPlugin(ScrollTrigger);
-    const IntroVideoRef = useRef(null);
-    const roadmapRef = useRef(null);
-    useEffect(() => {
-        
 
-        /*initialise la video à 0 */
-
-        ScrollTrigger.create({
-            trigger: IntroVideoRef.current,
-            scrub :true,
-            pin: IntroVideoRef.current,
-            anticipatePin: 1,
-            start: "top top",
-            end: "+=3000",
-            /*markers: true,*/
-        });
-
-        /*gsap.fromTo(".container--roadmap--grid",
-        {opacity: 0},
-        {
-            scrollTrigger:{
-                trigger: ".container--roadmap--grid",
-                scrub: true,
-                start: "top bottom",
-                end: "+=1000",
-                markers: true
-            },
-            duration: 1,
-            opacity: 1
-        })*/
-
-    }, [IntroVideoRef]);
     return (
-        <div ref={IntroVideoRef} className="container--roadmap">
-                <div ref={roadmapRef} className="container--roadmap--grid">
-                    <div className="roadmap--head">
-                        <div className="container--title">
-                            This is our Roadmap
-                            to bring the ecosystem
-                        </div>
-                        <div className="container--subtitle">
-                            Lorem ipsum sectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut 
-                            labore et dolore magna aliqua. Ut enim 
-                            ad minim veniam, quis nostrud exercitation
-                        </div>
-                    </div>
-                    <div className="roadmap--steps">
-                        <div className="separator">
-                            {roadmap.steps.map(step=>(
-                                <div key={step.id} className="step--grid">
-                                    <div className="title">{step.title}</div>
-                                    <div className="content">{step.content}</div>
-                                </div>
-                            ))}
-                        </div>
-                        
-                    </div>
-                </div>
-        </div>
+        <RoadmapContainer>
+
+                <RoadmapDoors>
+                    <RoadmapLeftDoor src={leftDoor} />
+                    <RoadmapRightDoor src={rightDoor}/>
+                </RoadmapDoors>
+                {/* <RoadmapCouloir src={couloir}/> */}
+        </RoadmapContainer>
     )
 
 }

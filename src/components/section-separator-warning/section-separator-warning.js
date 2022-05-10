@@ -8,6 +8,8 @@ const SeparatorContainer = styled.div`
     display: grid;
     align-items: center;
     animation: warning-color 2s linear infinite;
+    z-index: 10;
+    position: absolute;
     @keyframes warning-color{
         0%, 100%{
             background: black;

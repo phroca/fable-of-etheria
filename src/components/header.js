@@ -84,7 +84,8 @@ class Header extends React.Component {
               <div className="light"><img height="30" width="30" src={lightIcon} /></div>
             </div>
             <div className="nav-group">
-              <img className="btn-menu-open" src={menuIcon} onClick={this.handleClickMenuOpen}/>
+            <Link to="/"><span>CHOOSE YOUR SIDE</span></Link>
+              {/* <img className="btn-menu-open" src={menuIcon} onClick={this.handleClickMenuOpen}/> */}
             </div>
           </div>
         </div>

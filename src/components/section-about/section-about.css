@@ -28,7 +28,7 @@
 
 @media(max-width: 640px) {
     .section-intro>div {
-        padding: 50px 40px;
+        padding: 150px 40px 50px;
         grid-template-columns: auto;
         grid-template-rows: repeat(2, auto);
         justify-content: center;
@@ -46,7 +46,7 @@
     }
     .section-intro--groupImage {
         grid-template-columns: auto !important;
-        grid-template-rows: repeat(2, auto) !important;
+        grid-template-rows: repeat(3, auto) !important;
     }
     .section-intro>div .sig-img-1 {
         justify-self: center;

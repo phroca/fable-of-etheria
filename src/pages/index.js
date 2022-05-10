@@ -19,6 +19,7 @@ import SectionSeparator from "../components/section-separator/section-separator"
 import SectionPresentation from "../components/section-presentation/section-presentation"
 import SectionSeparatorWarning from "../components/section-separator-warning/section-separator-warning"
 import SectionAbout from "../components/section-about/section-about"
+import SectionRoadmap from "../components/section-roadmap/section-roadmap"
 
 
 
@@ -75,7 +76,8 @@ return(
     <SectionPresentation />
     <SectionDiscover />
     <SectionSeparatorWarning />
-    {/* <SectionRoadmap />*/}
+    <SectionRoadmap />
+    <SectionSeparatorWarning />
     <SectionAbout /> 
   </Layout>
 )

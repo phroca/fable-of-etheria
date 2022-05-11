@@ -20,6 +20,7 @@ import SectionPresentation from "../components/section-presentation/section-pres
 import SectionSeparatorWarning from "../components/section-separator-warning/section-separator-warning"
 import SectionAbout from "../components/section-about/section-about"
 import SectionRoadmap from "../components/section-roadmap/section-roadmap"
+import { Link } from "gatsby"
 
 
 
@@ -67,7 +68,7 @@ return(
             <img className="hero--cristal-centre-pos" src={cristalCentre} alt=""></img>
           </div>
           <div className="hero--title-choose-side">
-            <h1>Choose your side</h1>
+            <Link to="/story"><h1>Choose your side</h1></Link>
           </div>
         </div>
       </div>

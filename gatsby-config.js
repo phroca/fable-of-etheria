@@ -47,7 +47,7 @@ module.exports = {
               enterEventName: 'sal:in', // Enter event name
               exitEventName: 'sal:out', // Exit event name
         }
-  }
+        },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,

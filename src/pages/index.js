@@ -67,7 +67,7 @@ return(
             <img className="hero--cristal-centre-pos" src={cristalCentre} alt=""></img>
           </div>
           <div className="hero--title-choose-side">
-            <h1>Choose your side</h1>
+            <Link to="/story"><h1>Choose your side</h1></Link>
           </div>
         </div>
       </div>

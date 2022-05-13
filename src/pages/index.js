@@ -20,6 +20,7 @@ import SectionPresentation from "../components/section-presentation/section-pres
 import SectionSeparatorWarning from "../components/section-separator-warning/section-separator-warning"
 import SectionAbout from "../components/section-about/section-about"
 import SectionRoadmap from "../components/section-roadmap/section-roadmap"
+import { Link } from "gatsby"
 
 
 

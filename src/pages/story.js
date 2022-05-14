@@ -2,7 +2,7 @@ import * as React from "react"
 import { useRef, useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-// import { Canvas, useLoader, useFrame } from "@react-three/fiber"
+ import { Canvas, useLoader, useFrame } from "@react-three/fiber"
 // import Model from "../components/story/model"
 import sorcerer from "../images/sorcerer.webp"
 import Layout from "../components/layout"
@@ -63,7 +63,7 @@ const Title = styled.h2`
 `
 const Text = styled.p`
 `
-/*const Box = (props) => {
+const Box = (props) => {
   // This reference gives us direct access to the THREE.Mesh object
   const ref = useRef();
   // Hold state for hovered and clicked events
@@ -84,7 +84,7 @@ const Text = styled.p`
       <meshStandardMaterial color={hovered ? 'red' : 'blue'} />
     </mesh>
   )
-}*/
+}
 
 const StoryPage = () => {
   // const gltf = useLoader(GLTFLoader, crystal3D)
@@ -95,12 +95,12 @@ const StoryPage = () => {
         <PicturesContainer>
           <Sorcerer src={sorcerer}/>
           <Crystal3D>
-            {/* <Canvas>
+            <Canvas>
               <ambientLight intensity={0.5} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
               <pointLight position={[-10, -10, -10]} />
               <Box position={[0, 0, 0]} />
-            </Canvas> */}
+            </Canvas>
           </Crystal3D>
         </PicturesContainer>
         <TextContainer>

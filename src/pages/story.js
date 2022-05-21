@@ -9,6 +9,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 // import crystal3D from "../components/story/crystal-etheria.gltf"
+
+import storydata from '../../storydate.json'
+
 const StoryContainer = styled.div`
   width: 100%;
   height: 100vh;  
@@ -26,10 +29,15 @@ const PicturesContainer = styled.div`
   justify-items: center;
 `
 const Sorcerer = styled.img`
+  opacity: 0;
+  transition: opacity 1s ease-out;
   position: absolute;
   width: 80%;
   @media (max-width: 640px) {
     width: 100vh;
+  }
+  &.appeared{
+    opacity: 1
   }
 `
 const Crystal3D = styled.div`
@@ -56,6 +64,16 @@ color: white;
 margin: auto 20px;
 `
 const Choices = styled.div`
+margin: auto 20px;
+`
+
+const Choice = styled.div`
+  color: white;
+  cursor: pointer;
+  &:hover{
+    color: red;
+    text-decoration: underline;
+  }
 `
 const Continue = styled.div`
 `
@@ -88,13 +106,43 @@ const Box = (props) => {
 
 const StoryPage = () => {
   // const gltf = useLoader(GLTFLoader, crystal3D)
+  const [score, setScore] = useState({
+    helheim: 0,
+    neutre: 0,
+    femto: 0
+  });
+  const [textSorcerer, setTextSorcerer] = useState("");
+  const [currentOptions, setCurrentOptions] = useState([]);
+  const [optionChoosen, setOptionChoosen] = useState("");
+  const [activateGame, setActivateGame] = useState(false);
+  const startGame = () => {
+    showTextNode(1);
+    setActivateGame(true)
+  }
+  const showTextNode = (index) => {
+    const text = storydata.find(data => data.id === index);
+    setTextSorcerer(text.text);
+    setCurrentOptions(text.options);
+  }
+
+  const selectOption = (option) => {
+    const nextTextNodeId = option.nextText;
+    setOptionChoosen(option.text);
+    const currentScore = {...score};
+    setScore({
+      helheim: currentScore.helheim + isNaN(option?.pointHelheim) ? 0 : parseInt(option?.pointHelheim),
+      neutre: currentScore.neutre + isNaN(option?.pointNeutre) ? 0 : parseInt(option?.pointNeutre),
+      femto: currentScore.femto + isNaN(option?.pointFemto) ? 0 : parseInt(option?.pointFemto),
+    })
+    showTextNode(nextTextNodeId);
+  }
   return(
     <Layout>
       <Seo title="Choose your side" />
       <StoryContainer>
         <PicturesContainer>
-          <Sorcerer src={sorcerer}/>
-          <Crystal3D>
+          <Sorcerer src={sorcerer}  className={activateGame ? "appeared" : ""}/>
+          <Crystal3D onClick={() => startGame()}>
             <Canvas>
               <ambientLight intensity={0.5} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
@@ -103,18 +151,24 @@ const StoryPage = () => {
             </Canvas>
           </Crystal3D>
         </PicturesContainer>
-        <TextContainer>
+        {activateGame && <TextContainer>
           <SorcererSpeak>
             <Title>Sorcier</Title>
-            <Text>Ca m’appartient ca, tu sais au moins ce que c’est ? C’est du Crystal ! C’est une ressource indispensable à la survie du monde d’Etheria</Text>
+            <Text>{textSorcerer}</Text>
           </SorcererSpeak>
           <PlayerSpeak>
             <Title>Joueur</Title>
-            <Text>Calmez vous ! C'est quoi au juste ? Un simple caillou ?</Text>
+            <Text>{optionChoosen}</Text>
           </PlayerSpeak>
-          <Choices></Choices>
+          <Choices>
+            {currentOptions?.map( (option, index) => (
+              <Choice key={index} onClick={()=> selectOption(option)}>
+              {option.text}
+              </Choice>
+            ))}
+          </Choices>
           <Continue />
-        </TextContainer>
+        </TextContainer>}
       </StoryContainer>
     </Layout>
   )

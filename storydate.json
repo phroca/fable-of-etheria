@@ -1,0 +1,110 @@
+[{
+        "id": 1,
+        "text": "Ca m’appartient ca, tu sais au moins ce que c’est ? C’est du Crystal ! C’est une ressource indispensable à la survie du monde d’Etheria",
+        "options": [{
+                "text": "Calmez vous ! C'est quoi au juste ? Un simple caillou ?",
+                "nextText": 2
+            },
+            {
+                "text": "Mais vous êtes qui au juste ?!",
+                "nextText": 3
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "text": "Un simple caillou ? *rire démoniaque* Cela me prouve bien que tu es un ignorant ! Beaucoup de monde seraient prêt à tuer pour ce Crystal",
+        "options": [{
+            "text": "Continuez ...",
+            "nextText": 4
+        }]
+    },
+    {
+        "id": 3,
+        "text": "Peu importe qui je suis ! Ce qui compte c’est ce que je possède entre les mains ! Tu ne te rend pas compte que certaine personnes seraient prête à tuer pour ca ! ",
+        "options": [{
+            "text": "Continuez ...",
+            "nextText": 4
+        }]
+    },
+    {
+        "id": 4,
+        "text": "Ces crystaux se sont formés il y’a des millions d’années dans les profondeurs du monde d’Etheria, Il renferme en eux le fruit d’une puissance technologique casiment infini !  La ville de Central est la principale source d’exploitation de cette ressource",
+        "options": [{
+                "text": "J'imagine que les alentours de Central sont remplis de mine qui exploite ce Crystal",
+                "nextText": 5,
+                "pointHelheim": 1
+            },
+            {
+                "text": "Oah ! Ce crystal doit coûter une fortune !",
+                "nextText": 5,
+                "pointFemto": 1
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "text": "C’est exact ! Femto Corp est la société qui exploite le crystal et entre autres … Une bonne parties des habitants de Central. Mais là n’est pas le sujet ! Qui es tu au faite  ?! Et que fait tu ici ?!",
+        "options": [{
+                "text": "Appellez moi [nom] Attendez comment ca ? Ils exploitent les habitants de la ville ?! ",
+                "nextText": 6,
+                "pointHelheim": 1
+            },
+            {
+                "text": "Mon nom est [nom], je viens d'arriver à Central, Je venais pour me faire enregistrer en tant que nouveau citoyen mais visiblement je me suis trompé de porte",
+                "nextText": 7,
+                "pointNeutre": 1
+            },
+            {
+                "text": "Femto Corp ? Ce nom me semble famillier, je l'ai vu de partout en arrivant aux portes de Central. Leurs fondations m'interesse. [nom] Enchanté  ",
+                "nextText": 7,
+                "pointFemto": 1
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "text": "Femto fut fondé il y’a 400 ans par “ … “. Seulement 50 ans après l’unification des peuples autour de la ville de Centrale. La majorité des habitants de la basse ville  travaille pour eux. notamment le quartier d’Helheim qui fait beaucoup parler de lui en ce moment",
+        "options": [{
+            "text": "Helheim vous dîte ? Il me semble que ce sont les gens qui scandaient pour la liberté au porte de Femto",
+            "nextText": 8
+        }]
+    },
+    {
+        "id": 7,
+        "text": "Sais tu au moins où tu es [nom] ? Regarde autour de toi, ne vois-tu pas ce logo arboré sur tous les murs. Tu es au centre d’enregistrement de la ville. Centre dirigé par Femto. Disons que tu es au bon endroit",
+        "options": [{
+            "text": "Ok je vois, très interessant. Au faîte, qui était tout ces gens aux portes de Femto qui scandait pour la liberté",
+            "nextText": 8
+        }]
+    },
+    {
+        "id": 8,
+        "text": "Les habitants d'Helheim ... Un vent d'insuréction se fait ressentire dans la basse ville depuis un moment. Cela explique cette masse d'habitant à nos portes. Il faut admettre que les conditions de travails chez Femto se dégrade de plus en plus",
+        "options": [{
+                "text": "Cela peut se comprendre ! Surtout si ca fait longtemps que ca dur ",
+                "nextText": 9,
+                "pointHelheim": 1
+            },
+            {
+                "text": "Comment en vouloir à Femto qui leurs fournis un travail pour vivre ?",
+                "nextText": 9,
+                "pointFemto": 1
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "text": "Peu importe, dans tout les cas il faudra que Femto trouve un moyen d’apaiser cette escalades de violence, sinon cela pourrais mal finir pour Central !",
+        "options": [{
+            "text": "...",
+            "nextText": 10
+        }]
+    },
+    {
+        "id": 10,
+        "text": "* Une alarme se fait entendre dans toute le batiment *",
+        "fin": true
+    },
+    {}
+]

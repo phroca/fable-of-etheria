@@ -115,9 +115,12 @@ const StoryPage = () => {
   const [currentOptions, setCurrentOptions] = useState([]);
   const [optionChoosen, setOptionChoosen] = useState("");
   const [activateGame, setActivateGame] = useState(false);
+  const [currentIndexNode, setCurrentIndexNode] = useState(1);
   const startGame = () => {
-    showTextNode(1);
-    setActivateGame(true)
+    if(currentIndexNode === 1){
+      showTextNode(1);
+      setActivateGame(true)
+    }
   }
   const showTextNode = (index) => {
     const text = storydata.find(data => data.id === index);
@@ -127,6 +130,7 @@ const StoryPage = () => {
 
   const selectOption = (option) => {
     const nextTextNodeId = option.nextText;
+    setCurrentIndexNode(nextTextNodeId);
     setOptionChoosen(option.text);
     const currentScore = {...score};
     setScore({

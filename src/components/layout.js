@@ -25,7 +25,7 @@ class Layout extends React.Component {
         <Header darkMode={this.state.isDarkMode} clickDarkLight={this.handleClickDarkLight}/>
         <div>
           <main className={this.state.isDarkMode ? 'dark-mode': 'light-mode'}>{children}</main>
-          <FooterWidget darkMode={this.state.isDarkMode ? 'dark-mode': 'light-mode'} />
+          {/* <FooterWidget darkMode={this.state.isDarkMode ? 'dark-mode': 'light-mode'} /> */}
           <Footer darkMode={this.state.isDarkMode ? 'dark-mode': 'light-mode'}/>
         </div>
       </>

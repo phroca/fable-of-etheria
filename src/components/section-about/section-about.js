@@ -97,7 +97,7 @@ const SectionAbout = () => {
         <SectionGroup className="section-intro" >
             <SectionHeading>
                 <SectionTitle className="section-intro--subtitle">
-                    The fables of Etherea creators
+                    The fables of Etherea founders
                 </SectionTitle>
                 <SectionAboutContainer className="section-intro--about">
                     <SectionGroupImage className="section-intro--groupImage" >

@@ -261,6 +261,10 @@ const StatInfoPanel = styled.div`
     background-color: #627379;
     padding: 4px;
     position: relative;
+    &.deactivate{
+        box-shadow: 0 0 40px #000000 !important;
+        background-color: #181818 !important;
+    }
     @media(max-width: 640px) {
         height: 150px;
         width: 300px;
@@ -348,18 +352,18 @@ const SectionDiscover = () => {
                         </SectionCardTitle>
                         <SectionCardText >
                             - get your etherian, choose your side.<br/>
-                            - stake your characters and yield $
+                            - stake your characters and earn $
                         </SectionCardText>
                     </SectionCardInner>
                 </SectionCard>
                 <SectionCard className="section-discover--subtitle">
                     <SectionCardInner>
                         <SectionCardTitle >
-                            play-to-earn
+                            ecosystem
                         </SectionCardTitle>
                         <SectionCardText >
+                            - $ is the utility token for the Fables of Etherians ecosystem.<br/>
                             - use $ to purchase futures collectibles for your etherians and upgrades<br/>
-                            - $ is the utility token for the Fable of Etherians ecosystem.
                         </SectionCardText>
                     </SectionCardInner>
                 </SectionCard>
@@ -369,8 +373,9 @@ const SectionDiscover = () => {
                             community & membership
                         </SectionCardTitle>
                         <SectionCardText >
-                            - we are a great community to offer the best in NFT gaming experience.<br/>
-                            - the member will build the factions of the Fable of Etheria, and promote missions for the community
+                            - discover the proposed quests and take part in the Fables of Etheria<br/>
+                            - the side you chose will be your best ally in the community.<br/>
+                            - the member will build the factions of the Fables of Etheria, and promote missions for the community
                         </SectionCardText>
                     </SectionCardInner>
                 </SectionCard>
@@ -410,29 +415,29 @@ const SectionDiscover = () => {
                                     </PanelSubTitle>
                                 </PanelWrapper>
                             </StatInfoPanel>
-                            <StatInfoPanel>
+                            <StatInfoPanel className="deactivate">
                                 <PanelWrapper>
                                     <Particles>
 
                                     </Particles>
                                     <PanelTitle>
-                                        10000
+                                        TBA
                                     </PanelTitle>
                                     <PanelSubTitle>
-                                        Etherians Collectibles
+                                        ????? ????????
                                     </PanelSubTitle>
                                 </PanelWrapper>
                             </StatInfoPanel>
-                            <StatInfoPanel>
+                            <StatInfoPanel className="deactivate">
                                 <PanelWrapper>
                                     <Particles>
 
                                     </Particles>
                                     <PanelTitle>
-                                        10000
+                                        TBA
                                     </PanelTitle>
                                     <PanelSubTitle>
-                                        Lands to conquer
+                                        ????? ?? ??????
                                     </PanelSubTitle>
                                 </PanelWrapper>
                             </StatInfoPanel>

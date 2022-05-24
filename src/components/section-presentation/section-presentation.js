@@ -410,8 +410,8 @@ const SectionPresentation = () => {
                     Stake, Yield
                 </PresentationTitle>
                 <PresentationSub>
-                In 2672, the Earth has reach its limits. The humanity is on a perpertual war between two sides.<br/><br/>
-                Get your Etherian with collectibles, stake to yield & build your army to climb the ranks.
+                    In 2600, the planet Etheria unified its peoples into a single world capital called Central.<br/><br/>
+                    Get your Etherian with collectibles, stake to yield & earn $ and take part in the ecosystem of Central.
                 </PresentationSub>
             </PresentationText>
             <Cadre className="cadre">

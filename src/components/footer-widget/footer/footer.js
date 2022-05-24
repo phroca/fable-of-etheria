@@ -120,8 +120,7 @@ const Footer = ({darkMode}) => (
             <FooterDivider className="footer--divider"/>
             <FooterSubLinks>
                 <FooterSiteInfo>
-                    <p>2021, All right Reserved</p>
-                    <p>Designed by ROCA IT</p>
+                    <p>2022, All right Reserved</p>
                 </FooterSiteInfo>
                 <FooterPolicies>
                     {/* {socialdata.privacyLink.map( sl => (

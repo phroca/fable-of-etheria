@@ -12,7 +12,7 @@ const RoadmapContainer = styled.div`
     position: relative;
     z-index: 0;
     background: black;
-    height: 50vw;
+    height: 56.5vw;
     @media(max-width: 640px) {
         height: 70vw;
     }
@@ -28,13 +28,13 @@ const RoadmapDoors = styled.div`
 `
 const RoadmapLeftDoor = styled.img`
     position: absolute;
-    height: 70vw;
+    height: 56.5vw;
     left:0;
     // left: 13vw;
 `
 const RoadmapRightDoor = styled.img`
     position: absolute;
-    height: 70vw;
+    height: 56.5vw;
     right: 0;
     // right:13vw;
 `

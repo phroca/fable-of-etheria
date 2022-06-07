@@ -14,7 +14,7 @@ const RoadmapContainer = styled.div`
     background: black;
     height: 56.5vw;
     @media(max-width: 640px) {
-        height: 70vw;
+        height: 56.5vw;
     }
 `
 const RoadmapDoors = styled.div`
@@ -23,7 +23,7 @@ const RoadmapDoors = styled.div`
     grid-template-rows: auto auto;
     z-index: 2;
     @media(max-width: 640px) {
-        margin-top: 65px;
+        margin-top: 100px;
     }
 `
 const RoadmapLeftDoor = styled.img`

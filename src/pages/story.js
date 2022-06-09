@@ -11,16 +11,23 @@ import Seo from "../components/seo"
 // import crystal3D from "../components/story/crystal-etheria.gltf"
 
 import storydata from '../../storydate.json'
+import fenetre from "../images/fenetre.webp"
+import pupitre from "../images/pupitre.webp"
+import crystal from "../images/crystal.webp"
+import "../components/story.css"
 
 const StoryContainer = styled.div`
   width: 100%;
   height: 100vh;  
-  background-color: black;
+  background: radial-gradient(67.13% 46.13% at 50% 50%, #343b75 0, #000000 100%);
+  //background-color: black;
   display: grid;
   grid-template-rows: auto 300px;
   position: relative;
   @media (max-width: 640px) {
     grid-template-rows: auto 400px;
+    // pour cacher la largeur du sorcier
+    overflow: hidden;
   }
 `
 const PicturesContainer = styled.div`
@@ -32,20 +39,50 @@ const Sorcerer = styled.img`
   opacity: 0;
   transition: opacity 1s ease-out;
   position: absolute;
-  width: 80%;
+  width: 70%;
   @media (max-width: 640px) {
     width: 100vh;
+    overflow: hidden;
   }
   &.appeared{
     opacity: 1
   }
 `
+const Fenetre = styled.img`
+  position: absolute;
+  top: 6vw;
+  @media (max-width: 640px) {
+     width: 40vh;
+  }
+
+`
+const Pupitre = styled.img`
+  position: absolute;
+  bottom: 0;
+  @media (max-width: 640px) {
+    width: 40vh;
+    bottom: 25vh;
+  }
+
+`
+const Crystal = styled.img`
+  position: absolute;
+  width: 5vw;
+  animation: floatCristal 5s linear infinite;
+  @media (max-width: 640px) {
+    width: 5vh;
+  }
+`
 const Crystal3D = styled.div`
   position: absolute;
-  height: 300px;
-  top: 50%;
+  height: 15vw;
+  width: 10vw;
+  top: 30%;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
   @media (max-width: 640px) {
-    top: 50vw;
   }
 `
 const TextContainer = styled.div`
@@ -81,28 +118,7 @@ const Title = styled.h2`
 `
 const Text = styled.p`
 `
-const Box = (props) => {
-  // This reference gives us direct access to the THREE.Mesh object
-  const ref = useRef();
-  // Hold state for hovered and clicked events
-  const [hovered, hover] = useState(false);
-  const [clicked, click] = useState(false);
-  // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => (ref.current.rotation.y += 0.01));
-  // Return the view, these are regular Threejs elements expressed in JSX
-  return (
-    <mesh
-      {...props}
-      ref={ref}
-      scale={clicked ? 3 : 2}
-      onClick={(event) => click(!clicked)}
-      onPointerOver={(event) => hover(true)}
-      onPointerOut={(event) => hover(false)}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? 'red' : 'blue'} />
-    </mesh>
-  )
-}
+
 
 const StoryPage = () => {
   // const gltf = useLoader(GLTFLoader, crystal3D)
@@ -145,14 +161,11 @@ const StoryPage = () => {
       <Seo title="Choose your side" />
       <StoryContainer>
         <PicturesContainer>
+          <Fenetre src={fenetre}/>
           <Sorcerer src={sorcerer}  className={activateGame ? "appeared" : ""}/>
+          <Pupitre src={pupitre}/>
           <Crystal3D onClick={() => startGame()}>
-            <Canvas>
-              <ambientLight intensity={0.5} />
-              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-              <pointLight position={[-10, -10, -10]} />
-              <Box position={[0, 0, 0]} />
-            </Canvas>
+          <Crystal src={crystal}/>
           </Crystal3D>
         </PicturesContainer>
         {activateGame && <TextContainer>

@@ -102,6 +102,7 @@ margin: auto 20px;
 `
 const Choices = styled.div`
 margin: auto 20px;
+text-align: right;
 `
 
 const Choice = styled.div`
@@ -175,7 +176,7 @@ const StoryPage = () => {
           </SorcererSpeak>
           <PlayerSpeak>
             <Title>Joueur</Title>
-            <Text>{optionChoosen}</Text>
+            {/* <Text>{optionChoosen}</Text> */}
           </PlayerSpeak>
           <Choices>
             {currentOptions?.map( (option, index) => (

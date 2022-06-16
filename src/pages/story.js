@@ -10,7 +10,7 @@ import Seo from "../components/seo"
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 // import crystal3D from "../components/story/crystal-etheria.gltf"
 
-import storydata from '../../storydate.json'
+import storydata from '../../storydate-en.json'
 import fenetre from "../images/fenetre.webp"
 import pupitre from "../images/pupitre.webp"
 import crystal from "../images/crystal.webp"

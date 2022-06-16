@@ -1,0 +1,110 @@
+[{
+        "id": 1,
+        "text": "Hé ho ! This is mine ! Do you even know what it is? It's Crystal! It's an essential resource for the survival of the world of Etheria.",
+        "options": [{
+                "text": "Calm down! What is it exactly ? A simple stone ?",
+                "nextText": 2
+            },
+            {
+                "text": "But who are you exactly ?!",
+                "nextText": 3
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "text": "A simple rock? This proves to me that you are ignorant! Many people would kill for this Crystal",
+        "options": [{
+            "text": "Continuez ...",
+            "nextText": 4
+        }]
+    },
+    {
+        "id": 3,
+        "text": "It doesn't matter who I am! What matters is what I have in my hands! Don't you realize that some people would kill for it! ",
+        "options": [{
+            "text": "Tell me more ...",
+            "nextText": 4
+        }]
+    },
+    {
+        "id": 4,
+        "text": "These crystals were formed millions of years ago in the depths of the world of Etheria. They contain the fruit of a nearly infinite technological power!  The city of Central is the main source of exploitation of this resource ",
+        "options": [{
+                "text": "I imagine that the surroundings of Central are full of mines that exploit this Crystal",
+                "nextText": 5,
+                "pointHelheim": 1
+            },
+            {
+                "text": "Oah! This crystal must cost a fortune!",
+                "nextText": 5,
+                "pointFemto": 1
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "text": "That's right! Femto Corp is the company that exploits the crystal... A good part of the citizens of Central. But that's not the point! Who are you anyway ?! And what are you doing here ?!",
+        "options": [{
+                "text": "Call me [name] Wait, what do you mean? They're exploiting the city's residents?!",
+                "nextText": 6,
+                "pointHelheim": 1
+            },
+            {
+                "text": "My name is [name] I was coming to register as a new citizen but obviously I came to the wrong door",
+                "nextText": 7,
+                "pointNeutre": 1
+            },
+            {
+                "text": "Femto Corp? This name seems familiar to me, I saw it everywhere when I arrived at the gates of Central. Their foundations interest me. [name] Nice to meet you  ",
+                "nextText": 7,
+                "pointFemto": 1
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "text": "Femto was founded 400 years ago by %%%. Only 50 years after the unification of the peoples around the city of Central. The majority of the citizens of the lower town work for them, especially the Helheim district, which is in the news a lot at the moment.",
+        "options": [{
+            "text": "Helheim ? It seems to me that these are the people who were chanting for freedom at the door of Femto",
+            "nextText": 8
+        }]
+    },
+    {
+        "id": 7,
+        "text": "Do you even know where you are? Look around you, don't you see that logo on every wall. You are in the city's registration center. A center run by Femto. Let's say you're in the right place",
+        "options": [{
+            "text": "Ok I see, very interesting. By the way, who were all those people at the doors of Femto chanting for freedom?",
+            "nextText": 8
+        }]
+    },
+    {
+        "id": 8,
+        "text": "The citizens of Helheim ... A wind of insurrection has been felt in the lower town for some time. This explains the mass of peoples at our doors. We have to admit that the working conditions at Femto are getting worse and worse",
+        "options": [{
+                "text": "This can be understood! Especially if it's been going on for a long time",
+                "nextText": 9,
+                "pointHelheim": 1
+            },
+            {
+                "text": "How can you blame Femto for providing them with a job to live on ?",
+                "nextText": 9,
+                "pointFemto": 1
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "text": "In any case, Femto will have to find a way to calm down this escalation of violence, otherwise it could end badly for Central !",
+        "options": [{
+            "text": "...",
+            "nextText": 10
+        }]
+    },
+    {
+        "id": 10,
+        "text": "* An alarm is heard throughout the building *",
+        "fin": true
+    },
+    {}
+]

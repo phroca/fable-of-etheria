@@ -373,9 +373,9 @@ const SectionDiscover = () => {
                             community & membership
                         </SectionCardTitle>
                         <SectionCardText >
-                            - discover the proposed quests and take part in the Fables of Etheria<br/>
+                            - discover the proposed quests and take part in the story<br/>
                             - the side you chose will be your best ally in the community.<br/>
-                            - the member will build the factions of the Fables of Etheria, and promote missions for the community
+                            - the member will build the factions, and promote missions for the community
                         </SectionCardText>
                     </SectionCardInner>
                 </SectionCard>
